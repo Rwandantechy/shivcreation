@@ -1,0 +1,116 @@
+<header
+  class="bg-white shadow-lg border-gray-200 px-2 lg:px-6 py-2 sticky top-0 z-50"
+>
+  <nav class="container flex justify-between mx-auto px-6 py-4">
+    <!-- Logo -->
+    <div>
+      <a href="/" class="flex items-center text-blue-500">
+        <img src="/images/logo.png" class="h-16 sm:h-10" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="flex justify-center items-center flex-1">
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden md:float-right">
+        <button
+          id="mobile-menu-toggle"
+          class="text-gray-700 focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex lg:items-center lg:w-auto" id="desktop-menu">
+        <ul class="flex space-x-8 justify-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="text-gray-700 uppercase active hover:text-[#E56F3F] font-bold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about"
+              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="product"
+              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
+              >Product</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog"
+              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact"
+              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="hidden lg:hidden" id="mobile-menu">
+        <ul class="mt-4">
+          <li>
+            <a
+              href="/"
+              class="block py-2 text-gray-700 uppercase active hover:text-[#E56F3F] font-medium"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about"
+              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              href="product"	
+              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
+              >Product</a
+            >
+          </li>
+          <li>
+            <a
+              href="blog"
+              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
+              >Blogs</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact"
+              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

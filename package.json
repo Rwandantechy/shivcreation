@@ -1,0 +1,29 @@
+{
+  "name": "shiv-creation",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "build": "npx tailwindcss -i ./public/stylesheets/style.css -o ./public/stylesheets/tailwind.css --watch --jit",
+    "lint": "prettier --write ./views/*.ejs ./public/javascripts/*.js ./public/stylesheets/*.css",
+    "lint:watch": "npm run lint -- --watch --ext .ejs --ext .js",
+    "dev": "npm run lint && nodemon ./bin/www"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.3"
+  }
+}

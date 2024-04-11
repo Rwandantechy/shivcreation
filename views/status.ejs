@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Tissues-Wipes</title>
+
+    <style>
+      body {
+        background-color: #d4dae68c;
+        margin: 0;
+        padding: 0;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        background-color: rgba(24, 24, 24, 0.436);
+      }
+
+      td {
+        border: 1px solid gray;
+        padding: 0.5rem;
+        text-align: center;
+      }
+      .table-wrapper {
+        position: relative;
+        width: 100%;
+        padding: 0rem 1rem;
+        overflow-x: auto;
+      }
+
+      .table-responsive {
+        position: relative;
+        display: inline-block;
+
+        width: max-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-wrapper">
+      <div class="table-responsive">
+        <table
+          class="table-auto w-screen overflow-visible"
+          id="milestoneTable"
+          border="1"
+        >
+          <!-- h1 for the sanitary pads  -->
+          <tr>
+            <th colspan="8">
+              <h1 style="text-align: center" class="text-4xl border-x border-4">
+                Sanitary Pads
+              </h1>
+            </th>
+          </tr>
+          <tr>
+            <th style="border: 1px solid gray" rowspan="2">Milestones</th>
+            <th style="border: 1px solid gray" colspan="7">Components</th>
+          </tr>
+          <tr>
+            <td>Top Layer</td>
+            <td>Absorption Layer</td>
+            <td>Bottom Layer</td>
+            <td>Sticking Glue</td>
+            <td>Release Paper</td>
+            <td>Single Pad packing</td>
+            <td>Pads packet</td>
+          </tr>
+          <tr>
+            <td>Status of Development</td>
+            <!-- Placeholder for options -->
+            <td id="development1"></td>
+            <td id="development2"></td>
+            <td id="development3"></td>
+            <td id="development4"></td>
+            <td id="development5"></td>
+            <td id="development6"></td>
+            <td id="development7"></td>
+          </tr>
+          <tr>
+            <td>Design</td>
+            <!-- Placeholder for options -->
+            <td id="design1"></td>
+            <td id="design2"></td>
+            <td id="design3"></td>
+            <td id="design4"></td>
+            <td id="design5"></td>
+            <td id="design6"></td>
+            <td id="design7"></td>
+          </tr>
+          <tr>
+            <td>Raw Material</td>
+            <!-- Placeholder for options -->
+            <td id="material1"></td>
+            <td id="material2"></td>
+            <td id="material3"></td>
+            <td id="material4"></td>
+            <td id="material5"></td>
+            <td id="material6"></td>
+            <td id="material7"></td>
+          </tr>
+          <tr>
+            <td>Machine</td>
+            <!-- Placeholder for options -->
+            <td id="machine1"></td>
+            <td id="machine2"></td>
+            <td id="machine3"></td>
+            <td id="machine4"></td>
+            <td id="machine5"></td>
+            <td id="machine6"></td>
+            <td id="machine7"></td>
+          </tr>
+          <tr>
+            <td>Quality assurance</td>
+            <!-- Placeholder for options -->
+            <td id="quality1"></td>
+            <td id="quality2"></td>
+            <td id="quality3"></td>
+            <td id="quality4"></td>
+            <td id="quality5"></td>
+            <td id="quality6"></td>
+            <td id="quality7"></td>
+          </tr>
+          <tr>
+            <td>Funds</td>
+            <!-- Placeholder for options -->
+            <td id="fund1"></td>
+            <td id="fund2"></td>
+            <td id="fund3"></td>
+            <td id="fund4"></td>
+            <td id="fund5"></td>
+            <td id="fund6"></td>
+            <td id="fund7"></td>
+          </tr>
+
+          <tr>
+            <td>Publication</td>
+            <!-- Placeholder for options -->
+            <!-- Placeholder for options -->
+            <td id="publication1"></td>
+            <td id="publication2"></td>
+            <td id="publication3"></td>
+            <td id="publication4"></td>
+            <td id="publication5"></td>
+            <td id="publication6"></td>
+            <td id="publication7"></td>
+          </tr>
+        </table>
+        <button onclick="addRow()">Add Row</button>
+        <button onclick="removeRow()">Remove Row</button>
+        <button onclick="addColumn()">Add Column</button>
+        <button onclick="removeColumn()">Remove Column</button>
+        <button onclick="generatePDF()">Print as PDF</button>
+        <script src="/javascripts/table.js"></script>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function generatePDF() {
+      var jsPDF = window.jspdf.jsPDF
+      var doc = new jsPDF('l', 'pt', 'a3')
+      var table = document.getElementById('milestoneTable')
+
+      // Check if table is not null and it has table rows
+      if (table && table.rows.length > 0) {
+        // Use autoTable to generate PDF table
+        doc.autoTable({
+          html: '#milestoneTable',
+          startY: 10,
+          theme: 'grid',
+          columnStyles: {
+            0: { cellWidth: 50 },
+            1: { cellWidth: 50 },
+            2: { cellWidth: 50 },
+            3: { cellWidth: 50 },
+            4: { cellWidth: 50 },
+            5: { cellWidth: 50 },
+            6: { cellWidth: 50 },
+            7: { cellWidth: 50 },
+          },
+          styles: {
+            fontSize: 12,
+            cellPadding: 2,
+            overflow: 'linebreak',
+            columnWidth: 'wrap',
+            rowHeight: 'auto',
+            halign: 'center',
+            valign: 'middle',
+            lineWidth: 0.1,
+            lineColor: [0, 0, 0],
+            fillColor: [255, 255, 255],
+            textColor: [0, 0, 0],
+            fontStyle: 'normal',
+          },
+        })
+
+        doc.save('projectStatus.pdf')
+      } else {
+        console.error('No valid data for PDF table.')
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</html>
