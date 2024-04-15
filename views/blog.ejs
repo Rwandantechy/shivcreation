@@ -6,7 +6,1077 @@
     <%- include('./partials/nav.ejs') %>
 
     <main class="lg:mx-8">
-        
+      <!-- Big blog section starts -->
+      <div
+        class="bg-white grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-12 py-8 sm:px-4 md:px-8 lg:px-8 lg:gap-8"
+      >
+        <div
+          class="relative flex xl:col-span-8 lg:col-span-10 md:col-span-12 min-h-96"
+        >
+          <article class="w-full px-8 bg-gray-50">
+            <header class="mb-4 lg:mb-6 not-format">
+              <address class="flex items-center mb-6 not-italic">
+                <div
+                  class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-black"
+                >
+                  <img
+                    class="mr-4 w-16 h-16 rounded-full"
+                    src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    alt="Jese Leos"
+                  />
+                  <div>
+                    <a
+                      href="#"
+                      rel="author"
+                      class="text-xl font-bold text-gray-900 dark:text-black"
+                      >Innocent Niyonzima</a
+                    >
+                    <p class="text-base text-gray-700 dark:text-gray-800">
+                      Shiv Creation Writer
+                    </p>
+                    <p class="text-base text-gray-500 dark:text-gray-400">
+                      <time
+                        pubdate
+                        datetime="2022-02-08"
+                        title="February 8th, 2022"
+                        >Feb. 8, 2024
+                      </time>
+                    </p>
+                  </div>
+                </div>
+              </address>
+              <h1
+                class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl"
+              >
+                How to heal your mind and body with Gratitude Patterns
+              </h1>
+            </header>
+            <p class="lead my-2 text-gray-500">
+              Mental issues have become a common problem in today's world. The
+              fast-paced life, the pressure to perform, and the constant
+              comparison with others have made people more prone to mental.
+            </p>
+            <p class="text-gray-500">
+              Now all of us are aware of the fact that mental health is as
+              important as physical health. But how many of us actually take
+              care of our mental health? How many of us actually take a break
+              from our busy lives and spend some time with ourselves? How many
+              of us actually practice gratitude?
+            </p>
+            <figure class="mt-2">
+              <img class="w-full" src="/images/mental health.jpg" alt="" />
+              <figcaption>Mental health</figcaption>
+            </figure>
+
+            <h2 class="text-gray-500 my-4 leading-6">
+              Why everyone should be concerned about mental health?
+            </h2>
+            <p class="text-gray-500 my-4 leading-6 text-justify">
+              First of all you need to understand that mental health is not just
+              about mental illness. Mental health is about your overall
+              well-being. It is about how you feel about yourself, how you
+              handle stress, how you relate to others, and how you make choices.
+              Mental health is as important as physical health. If you are not
+              mentally healthy, you will not be able to enjoy your life to the
+              fullest. You will not be able to perform well at work, you will
+              not be able to maintain healthy relationships, and you will not be
+              able to enjoy the little things in life.
+            </p>
+            <p class="text-gray-500 my-4 leading-6 text-justify">
+              The statistics are alarming. According to the World Health
+              Organization, mental health problems are the leading cause of
+              disability worldwide. In the United States, one in five adults
+              experience mental illness each year. In the UK, one in four people
+              will experience a mental health problem each year. In India, the
+              number of people suffering from mental health problems is
+              increasing rapidly. The situation is similar in other countries
+              around the world.
+            </p>
+
+            <h2 class="text-gray-500 my-4 leading-6 text-justify">
+              What to do when you realize you are having mental issues?
+            </h2>
+            <p class="text-gray-500 my-4 leading-6 text-justify">
+              First calm down and listen to your body. Your body is always
+              giving you signals. If you are feeling anxious, stressed, or
+              depressed, it is important to listen to your body and take action.
+              Do not ignore the signs. Do not try to suppress your feelings. Do
+              not try to hide your emotions. It is important to acknowledge your
+              feelings and take steps to address them.
+            </p>
+
+            <section class="my-4">
+              <form class="mb-6">
+                <div
+                  class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <label for="comment" class="sr-only">Your comment</label>
+                  <textarea
+                    id="comment"
+                    rows="6"
+                    class="px-0 w-full text-sm text-gray-900 rounded border-0 focus:ring-0"
+                    placeholder="Write a comment..."
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                >
+                  Post comment
+                </button>
+              </form>
+              <article class="mb-6 text-base bg-white rounded-lg shadow-lg p-4">
+                <footer class="flex justify-between items-center mb-2">
+                  <div class="flex items-center">
+                    <p
+                      class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-black"
+                    >
+                      <img
+                        class="mr-2 w-6 h-6 rounded-full"
+                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        alt="Michael Gough"
+                      />Michael Gough
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      <time
+                        pubdate
+                        datetime="2022-02-08"
+                        title="February 8th, 2022"
+                        >Feb. 8, 2022</time
+                      >
+                    </p>
+                  </div>
+                  <button
+                    id="dropdownComment1Button"
+                    data-dropdown-toggle="dropdownComment1"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    type="button"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 16 3"
+                    >
+                      <path
+                        d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownComment1"
+                    class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownMenuIconHorizontalButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Remove</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Report</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </footer>
+                <p>
+                  Very straight-to-point article. Really worth time reading.
+                  Thank you! But tools are just the instruments for the UX
+                  designers. The knowledge of the design tools are as important
+                  as the creation of the design strategy.
+                </p>
+                <div class="flex items-center mt-4 space-x-4">
+                  <button
+                    type="button"
+                    class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                  >
+                    <svg
+                      class="mr-1.5 w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 18"
+                    >
+                      <path
+                        d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                      />
+                    </svg>
+                    Reply
+                  </button>
+                </div>
+              </article>
+              <article
+                class="p-6 mb-6 ml-6 lg:ml-12 text-base bg-white rounded-lg shadow-lg"
+              >
+                <footer class="flex justify-between items-center mb-2">
+                  <div class="flex items-center">
+                    <p
+                      class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-black"
+                    >
+                      <img
+                        class="mr-2 w-6 h-6 rounded-full"
+                        src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                        alt="Jese Leos"
+                      />Jese Leos
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      <time
+                        pubdate
+                        datetime="2022-02-12"
+                        title="February 12th, 2022"
+                        >Feb. 12, 2022</time
+                      >
+                    </p>
+                  </div>
+                  <button
+                    id="dropdownComment2Button"
+                    data-dropdown-toggle="dropdownComment2"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    type="button"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 16 3"
+                    >
+                      <path
+                        d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownComment2"
+                    class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownMenuIconHorizontalButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Remove</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Report</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </footer>
+                <p>Much appreciated! Glad you liked it ☺️</p>
+                <div class="flex items-center mt-4 space-x-4">
+                  <button
+                    type="button"
+                    class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                  >
+                    <svg
+                      class="mr-1.5 w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 18"
+                    >
+                      <path
+                        d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                      />
+                    </svg>
+                    Reply
+                  </button>
+                </div>
+              </article>
+              <article class="mb-6 text-base bg-white rounded-lg shadow-lg p-4">
+                <footer class="flex justify-between items-center mb-2">
+                  <div class="flex items-center">
+                    <p
+                      class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-black"
+                    >
+                      <img
+                        class="mr-2 w-6 h-6 rounded-full"
+                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        alt="Michael Gough"
+                      />Michael Gough
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      <time
+                        pubdate
+                        datetime="2022-02-08"
+                        title="February 8th, 2022"
+                        >Feb. 8, 2022</time
+                      >
+                    </p>
+                  </div>
+                  <button
+                    id="dropdownComment1Button"
+                    data-dropdown-toggle="dropdownComment1"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    type="button"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 16 3"
+                    >
+                      <path
+                        d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownComment1"
+                    class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownMenuIconHorizontalButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Remove</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Report</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </footer>
+                <p>
+                  Very straight-to-point article. Really worth time reading.
+                  Thank you! But tools are just the instruments for the UX
+                  designers. The knowledge of the design tools are as important
+                  as the creation of the design strategy.
+                </p>
+                <div class="flex items-center mt-4 space-x-4">
+                  <button
+                    type="button"
+                    class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                  >
+                    <svg
+                      class="mr-1.5 w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 18"
+                    >
+                      <path
+                        d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                      />
+                    </svg>
+                    Reply
+                  </button>
+                </div>
+              </article>
+              <article class="mb-6 text-base bg-white rounded-lg shadow-lg p-4">
+                <footer class="flex justify-between items-center mb-2">
+                  <div class="flex items-center">
+                    <p
+                      class="inline-flex items-center mr-3 font-semibold text-sm text-gray-900 dark:text-black"
+                    >
+                      <img
+                        class="mr-2 w-6 h-6 rounded-full"
+                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        alt="Michael Gough"
+                      />Michael Gough
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      <time
+                        pubdate
+                        datetime="2022-02-08"
+                        title="February 8th, 2022"
+                        >Feb. 8, 2022</time
+                      >
+                    </p>
+                  </div>
+                  <button
+                    id="dropdownComment1Button"
+                    data-dropdown-toggle="dropdownComment1"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    type="button"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 16 3"
+                    >
+                      <path
+                        d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+                      />
+                    </svg>
+                    <span class="sr-only">Comment settings</span>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownComment1"
+                    class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+                  >
+                    <ul
+                      class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownMenuIconHorizontalButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Edit</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Remove</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-black"
+                          >Report</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </footer>
+                <p>
+                  Very straight-to-point article. Really worth time reading.
+                  Thank you! But tools are just the instruments for the UX
+                  designers. The knowledge of the design tools are as important
+                  as the creation of the design strategy.
+                </p>
+                <div class="flex items-center mt-4 space-x-4">
+                  <button
+                    type="button"
+                    class="flex items-center font-medium text-sm text-gray-500 hover:underline dark:text-gray-400"
+                  >
+                    <svg
+                      class="mr-1.5 w-3 h-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 18"
+                    >
+                      <path
+                        d="M18 0H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h2v4a1 1 0 0 0 1.707.707L10.414 13H18a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5 4h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2ZM5 4h5a1 1 0 1 1 0 2H5a1 1 0 0 1 0-2Zm2 5H5a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Zm9 0h-6a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2Z"
+                      />
+                    </svg>
+                    Reply
+                  </button>
+                </div>
+              </article>
+            </section>
+          </article>
+        </div>
+
+        <!-- middle part end  -->
+
+        <!-- Right aside section  of quick blogs start -->
+        <div
+          class="col-span-1 md:col-span-1 lg:col-span-4 hidden md:hidden lg:block"
+        >
+          <div
+            class="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-600"
+          >
+            <button
+              type="button"
+              class="pb-5 text-xs font-bold uppercase border-b-2 dark:border-violet-600"
+            >
+              Latest
+            </button>
+            <button
+              type="button"
+              class="pb-5 text-xs font-bold uppercase border-b-2 dark:border- dark:text-gray-600"
+            >
+              Popular
+            </button>
+          </div>
+          <div class="flex flex-col divide-y dark:divide-gray-300">
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/244x324"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Aenean ac tristique lorem, ut mollis dui.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  5 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Politics</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/246x326"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Vitae semper augue purus tincidunt libero.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  22 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >World</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/247x327"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Suspendisse potenti.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  37 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Business</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/246x326"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Vitae semper augue purus tincidunt libero.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  22 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >World</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="flex px-1 py-4">
+              <img
+                alt=""
+                class="flex-shrink-0 object-cover w-20 h-20 mr-4 dark:bg-gray-500"
+                src="https://source.unsplash.com/random/245x325"
+              />
+              <div class="flex flex-col flex-grow">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  class="font-serif hover:underline"
+                  >Nulla consectetur efficitur.</a
+                >
+                <p class="mt-auto text-xs dark:text-gray-600">
+                  14 minutes ago
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    class="block dark:text-[#E56F3F] lg:ml-2 lg:inline hover:underline"
+                    >Sports</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+          Right aside section  of quick blogs end
+         -->
+      </div>
+
+      <!--  Big blog section ends-->
+
+      <div class="flex justify-between px-4 mx-auto max-w-screen-xl"></div>
+
+      <aside
+        aria-label="Related articles"
+        class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-200"
+      >
+        <div class="px-4 mx-auto max-w-screen-xl">
+          <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-black">
+            Related articles
+          </h2>
+          <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="max-w-xs">
+              <a href="#">
+                <img
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
+                  class="mb-5 rounded-lg"
+                  alt="Image 1"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
+              >
+                <a href="#">
+                  Mental health in the tech industry: a personal story
+                </a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                Over the past year, Volosoft has undergone many changes! After
+                months of preparation.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 2 minutes
+              </a>
+            </article>
+            <article class="max-w-xs">
+              <a href="#">
+                <img
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png"
+                  class="mb-5 rounded-lg"
+                  alt="Image 2"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
+              >
+                <a href="#">Enterprise design tips</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                Over the past year, Volosoft has undergone many changes! After
+                months of preparation.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 12 minutes
+              </a>
+            </article>
+            <article class="max-w-xs">
+              <a href="#">
+                <img
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png"
+                  class="mb-5 rounded-lg"
+                  alt="Image 3"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
+              >
+                <a href="#">We partnered with Google</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                Over the past year, Volosoft has undergone many changes! After
+                months of preparation.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 8 minutes
+              </a>
+            </article>
+            <article class="max-w-xs">
+              <a href="#">
+                <img
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png"
+                  class="mb-5 rounded-lg"
+                  alt="Image 4"
+                />
+              </a>
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
+              >
+                <a href="#">Our first project with React</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400">
+                Over the past year, Volosoft has undergone many changes! After
+                months of preparation.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 4 minutes
+              </a>
+            </article>
+          </div>
+        </div>
+      </aside>
+
+      <section class="bg-white dark:bg-gray-300">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-md sm:text-center">
+            <h2
+              class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-black"
+            >
+              Sign up for our newsletter
+            </h2>
+            <p
+              class="mx-auto mb-8 max-w-2xl text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400"
+            >
+              Stay up to date with the roadmap progress, announcements and
+              exclusive discounts feel free to sign up with your email.
+            </p>
+            <form action="#">
+              <div
+                class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0"
+              >
+                <div class="relative w-full">
+                  <label
+                    for="email"
+                    class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                    >Email address</label
+                  >
+                  <div
+                    class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                      />
+                      <path
+                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    class="block p-3 pl-9 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Enter your email"
+                    type="email"
+                    id="email"
+                    required=""
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-[#E56F3F] border-[#E56F3F] sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-[#E56F3F] dark:hover:[#E56F3F] dark:focus:ring-primary-800"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              <div
+                class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300"
+              >
+                We care about the protection of your data.
+                <a
+                  href="#"
+                  class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                  >Read our Privacy Policy</a
+                >.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--==================== Footer starts=========================-->

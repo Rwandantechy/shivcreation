@@ -2,10 +2,9 @@ var swiper = new Swiper('.mySwiper', {
   spaceBetween: 30,
   centeredSlides: true,
   slidesPerView: 3,
-  spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 2000,
     disableOnInteraction: false,
   },
   pagination: {
@@ -15,8 +14,8 @@ var swiper = new Swiper('.mySwiper', {
   effect: 'cube',
   grabCursor: true,
   cubeEffect: {
-    shadow: true,
-    slideShadows: true,
+    shadow: false,
+    slideShadows: false,
     shadowOffset: 20,
     shadowScale: 0.94,
   },

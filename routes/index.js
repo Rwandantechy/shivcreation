@@ -12,5 +12,17 @@ router.get('/status', function (req, res, next) {
 router.get('/product', function (req, res, next) {
   res.render('product');
 });
-
+router.get('/blog', function (req, res, next) {
+  res.render('blog');
+});
+router.get('/test', function (req, res, next) {
+  res.render('test');
+});
+router.get('/contact', function (req, res, next) {
+  res.render('contact');
+});
+router.get('/about', function (req, res, next) {
+  res.render('about');
+});
+ 
 module.exports = router;
