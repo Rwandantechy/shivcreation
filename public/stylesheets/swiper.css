@@ -16,8 +16,7 @@ body {
   height: max-content !important;
   text-align: center;
   font-size: 18px;
-  display: flex; 
-
+  display: flex;
 }
 
 .swiper-pagination {
@@ -26,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%; 
+  width: 100%;
   z-index: 1111;
 }
 
@@ -64,7 +63,7 @@ body {
 
 /*  media query for small screen */
 @media (max-width: 768px) {
-  .swiper-slide  {
+  .swiper-slide {
     margin: 0;
     padding: 0;
     background-color: #f1f5f9 !important;
