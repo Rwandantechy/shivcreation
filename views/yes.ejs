@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scroll Animation with Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @keyframes backInDown {
+        0% {
+          transform: translateY(-1200px) scale(0.7);
+          opacity: 0.7;
+        }
+        80% {
+          transform: translateY(0px) scale(0.9);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 h-screen overflow-y-scroll">
+    <div class="container mx-auto px-4 py-16 text-center">
+      <h1 class="text-4xl font-bold mb-8">Scroll down to see the animation</h1>
+      <div class="relative h-96">
+        <div
+          id="box"
+          class="absolute inset-0 flex items-center justify-center text-white bg-blue-500 rounded-lg"
+        ></div>
+      </div>
+
+      <!-- Additional content to increase page height -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-semibold mb-4">Section 4</h2>
+        <p class="text-lg mb-4">Additional content to increase page height</p>
+        <img
+          src="https://via.placeholder.com/500"
+          alt="Placeholder"
+          class="mb-8"
+        />
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-2xl font-semibold mb-4">Section 5</h2>
+        <p class="text-lg mb-4">Additional content to increase page height</p>
+        <img
+          src="https://via.placeholder.com/500"
+          alt="Placeholder"
+          class="mb-8"
+        />
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-2xl font-semibold mb-4">Section 6</h2>
+        <p class="text-lg mb-4">Additional content to increase page height</p>
+        <img
+          src="https://via.placeholder.com/500"
+          alt="Placeholder"
+          class="mb-8"
+        />
+      </div>
+    </div>
+
+    <script src="/javascripts/yes.js"></script>
+  </body>
+</html>

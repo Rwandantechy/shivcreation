@@ -25,4 +25,8 @@ router.get('/about', function (req, res, next) {
   res.render('about');
 });
  
+// yes route
+router.get('/yes', function (req, res, next) {
+  res.render('yes');
+});
 module.exports = router;
