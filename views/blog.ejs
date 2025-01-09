@@ -1,19 +1,47 @@
 <html>
   <!-- include head.ejs -->
-  <%- include('./partials/head.ejs') %>
+  <%-include('./partials/head.ejs',{ title: 'BLOGS || SHIV CREATIONS' })%>
 
-  <body class="bg-[#F89D1C]">
+  <body>
     <%- include('./partials/nav.ejs') %>
 
-    <main class="lg:mx-8">
+    <main>
+      <section>
+        <div class="w-full relative p-0">
+          <div
+            class="w-full h-96 p-5 z-0 flex justify-center"
+            style="
+              background:
+                linear-gradient(
+                    rgba(128, 128, 128, 0.628),
+                    rgba(234, 237, 240, 0)
+                  )
+                  0% 0% / cover,
+                url('/images/Highlights/product1.jpg') center center repeat-x;
+              width: unset;
+              height: 80vh !important;
+            "
+          >
+            <div class="w-full py-5">
+              <div class="w-full pt-5 mt-5 text-center">
+                <h1
+                  class="text-5xl text-center mt-32 font-black mb-8 items-center text-white animate__animated animate__zoomIn"
+                >
+                  BLOGS
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Big blog section starts -->
       <div
-        class="bg-white grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-12 py-8 sm:px-4 md:px-8 lg:px-8 lg:gap-8"
+        class="bg-transparent grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-12"
       >
         <div
           class="relative flex xl:col-span-8 lg:col-span-10 md:col-span-12 min-h-96"
         >
-          <article class="w-full px-8 bg-gray-50">
+          <article class="w-full lg:px-16 px-4 py-2 bg-gray-50">
             <header class="mb-4 lg:mb-6 not-format">
               <address class="flex items-center mb-6 not-italic">
                 <div
@@ -21,7 +49,7 @@
                 >
                   <img
                     class="mr-4 w-16 h-16 rounded-full"
-                    src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    src="/images/client3.png"
                     alt="Jese Leos"
                   />
                   <div>
@@ -108,20 +136,20 @@
             <section class="my-4">
               <form class="mb-6">
                 <div
-                  class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+                  class="mb-4 bg-white rounded-lg rounded-t-lg border border-gray-700"
                 >
                   <label for="comment" class="sr-only">Your comment</label>
                   <textarea
                     id="comment"
                     rows="6"
-                    class="px-0 w-full text-sm text-gray-900 rounded border-0 focus:ring-0"
+                    class="px-4 w-full text-sm text-gray-900 bg-white rounded border focus:ring-0"
                     placeholder="Write a comment..."
                     required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                  class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-green-500 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
                 >
                   Post comment
                 </button>
@@ -134,7 +162,7 @@
                     >
                       <img
                         class="mr-2 w-6 h-6 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        src="/images/client3.png"
                         alt="Michael Gough"
                       />Michael Gough
                     </p>
@@ -150,8 +178,7 @@
                   <button
                     id="dropdownComment1Button"
                     data-dropdown-toggle="dropdownComment1"
-                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                    type="button"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-500"
                   >
                     <svg
                       class="w-4 h-4"
@@ -200,10 +227,10 @@
                   </div>
                 </footer>
                 <p>
-                  Very straight-to-point article. Really worth time reading.
-                  Thank you! But tools are just the instruments for the UX
-                  designers. The knowledge of the design tools are as important
-                  as the creation of the design strategy.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  modi. Non beatae quod nisi, fuga repellat at, quas eaque
+                  veritatis, fugit voluptatum voluptate atque architecto amet.
+                  Minima hic accusamus odio.
                 </p>
                 <div class="flex items-center mt-4 space-x-4">
                   <button
@@ -235,7 +262,7 @@
                     >
                       <img
                         class="mr-2 w-6 h-6 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                        src="/images/client3.png"
                         alt="Jese Leos"
                       />Jese Leos
                     </p>
@@ -251,7 +278,7 @@
                   <button
                     id="dropdownComment2Button"
                     data-dropdown-toggle="dropdownComment2"
-                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-500"
                     type="button"
                   >
                     <svg
@@ -329,7 +356,7 @@
                     >
                       <img
                         class="mr-2 w-6 h-6 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        src="/images/client3.png"
                         alt="Michael Gough"
                       />Michael Gough
                     </p>
@@ -345,7 +372,7 @@
                   <button
                     id="dropdownComment1Button"
                     data-dropdown-toggle="dropdownComment1"
-                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-500"
                     type="button"
                   >
                     <svg
@@ -395,10 +422,10 @@
                   </div>
                 </footer>
                 <p>
-                  Very straight-to-point article. Really worth time reading.
-                  Thank you! But tools are just the instruments for the UX
-                  designers. The knowledge of the design tools are as important
-                  as the creation of the design strategy.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  modi. Non beatae quod nisi, fuga repellat at, quas eaque
+                  veritatis, fugit voluptatum voluptate atque architecto amet.
+                  Minima hic accusamus odio.
                 </p>
                 <div class="flex items-center mt-4 space-x-4">
                   <button
@@ -428,7 +455,7 @@
                     >
                       <img
                         class="mr-2 w-6 h-6 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                        src="/images/client3.png"
                         alt="Michael Gough"
                       />Michael Gough
                     </p>
@@ -444,7 +471,7 @@
                   <button
                     id="dropdownComment1Button"
                     data-dropdown-toggle="dropdownComment1"
-                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:text-gray-400 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-green-500 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-gray-500"
                     type="button"
                   >
                     <svg
@@ -494,10 +521,10 @@
                   </div>
                 </footer>
                 <p>
-                  Very straight-to-point article. Really worth time reading.
-                  Thank you! But tools are just the instruments for the UX
-                  designers. The knowledge of the design tools are as important
-                  as the creation of the design strategy.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  modi. Non beatae quod nisi, fuga repellat at, quas eaque
+                  veritatis, fugit voluptatum voluptate atque architecto amet.
+                  Minima hic accusamus odio.
                 </p>
                 <div class="flex items-center mt-4 space-x-4">
                   <button
@@ -527,10 +554,10 @@
 
         <!-- Right aside section  of quick blogs start -->
         <div
-          class="col-span-1 md:col-span-1 lg:col-span-4 hidden md:hidden lg:block"
+          class="col-span-1 bg-[#ded9d9] md:col-span-1 lg:col-span-4 hidden md:hidden lg:block"
         >
           <div
-            class="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-600"
+            class="mb-8 pt-2 pl-2 space-x-5 border-b-2 border-opacity-10 dark:border-violet-600"
           >
             <button
               type="button"
@@ -918,8 +945,10 @@
                 </a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">
-                Over the past year, Volosoft has undergone many changes! After
-                months of preparation.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
+                porro totam, vel possimus repellat nemo culpa natus omnis odit
+                sit dolorem, facere facilis! Cumque nam eveniet repellendus
+                dignissimos exercitationem consequatur!
               </p>
               <a
                 href="#"
@@ -939,11 +968,13 @@
               <h2
                 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
               >
-                <a href="#">Enterprise design tips</a>
+                <a href="#"> Health Issues in our modern world </a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">
-                Over the past year, Volosoft has undergone many changes! After
-                months of preparation.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+                nobis maiores vitae neque dolores quo, aut reprehenderit enim
+                totam repellat optio consequuntur quas reiciendis aperiam ad
+                architecto impedit nam laudantium.
               </p>
               <a
                 href="#"
@@ -963,11 +994,12 @@
               <h2
                 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
               >
-                <a href="#">We partnered with Google</a>
+                <a href="#">What Google did to improve Human mental health</a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">
-                Over the past year, Volosoft has undergone many changes! After
-                months of preparation.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam quod error totam voluptatibus dolores tempore, accusamus
+                non libero quibusdam porro dicta saepe nam ad!
               </p>
               <a
                 href="#"
@@ -987,11 +1019,13 @@
               <h2
                 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-black"
               >
-                <a href="#">Our first project with React</a>
+                <a href="#">You can even suffer in the Team of your dreams</a>
               </h2>
               <p class="mb-4 text-gray-500 dark:text-gray-400">
-                Over the past year, Volosoft has undergone many changes! After
-                months of preparation.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                modi. Non beatae quod nisi, fuga repellat at, quas eaque
+                veritatis, fugit voluptatum voluptate atque architecto amet.
+                Minima hic accusamus odio.
               </p>
               <a
                 href="#"
@@ -1015,8 +1049,8 @@
             <p
               class="mx-auto mb-8 max-w-2xl text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400"
             >
-              Stay up to date with the roadmap progress, announcements and
-              exclusive discounts feel free to sign up with your email.
+              Stay up to date with the Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Esse dolore voluptates porro ad nam cumque .
             </p>
             <form action="#">
               <div
@@ -1047,7 +1081,7 @@
                     </svg>
                   </div>
                   <input
-                    class="block p-3 pl-9 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    class="block p-3 pl-9 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500"
                     placeholder="Enter your email"
                     type="email"
                     id="email"
@@ -1057,7 +1091,7 @@
                 <div>
                   <button
                     type="submit"
-                    class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-[#E56F3F] border-[#E56F3F] sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-[#E56F3F] dark:hover:[#E56F3F] dark:focus:ring-primary-800"
+                    class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer border-green-700 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-green-500 dark:hover:[#E56F3F] dark:focus:ring-primary-800"
                   >
                     Subscribe
                   </button>
@@ -1083,5 +1117,4 @@
     <%- include('./partials/footer.ejs') %>
     <!--==================== Footer ends=========================-->
   </body>
-  <script src="/javascripts/main.js"></script>
 </html>

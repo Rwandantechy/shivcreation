@@ -1,106 +1,69 @@
 <html>
   <!-- include head.ejs -->
-  <%- include('./partials/head.ejs') %>
+  <%-include('./partials/head.ejs',{ title: 'CONTACT US || SHIV CREATIONS' })%>
 
   <body class="">
     <%- include('./partials/nav.ejs') %>
 
-    <main class="lg:mx-8">
-      <section class="sliderAx h-auto">
-        <div id="slider-1" class="w-full bg-white" title="Gratitude Tree Kit">
-          <div class="flex w-full">
-            <div class="w-3/5 ml-8">
-              <img
-                class="w-full my-auto"
-                src="/images/New_Tree_Leaves.jpg"
-                alt="Gratitude Tree Kit"
-              />
-            </div>
-            <div class="sub w-full my-auto">
-              <div class="head text-5xl m-5 p-4 text-[#E56F3F] font-bold">
-                Gratitude Tree Kit
-              </div>
-              <div class="long-text text-[#333333] text-lg m-5 p-4">
-                The Gratitude Tree Kit is a tool that can help you to be more
-                positive and happy in your life. The tree and its leaves serve
-                as a reminder of the things you are grateful for. You can write
-                down the things you are grateful and you can always
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- frame start -->
-        <div id="slider-2" class="w-full bg-white" title="Gratitude Tree Kit">
-          <div class="flex w-full">
-            <div class="w-3/5 my-auto">
-              <img
-                class="w-full"
-                src="/images/New_Tree_No_Leaves.jpg"
-                alt="Gratitude Tree Kit"
-              />
-            </div>
-            <div class="sub w-full my-auto">
-              <div class="head text-5xl m-5 p-4 text-[#E56F3F] font-bold">
-                Tree without Leaves
-              </div>
-              <div class="long-text text-[#333333] text-lg m-5 p-4">
-                The Tree without leaves ( a fresh ) , you put your gratitudes
-                leaves on it after realizing all those blessings you are
-                bestowed with. the leaves are also provided blank.
+    <main>
+      <!-- ABOUT US HERO -->
+      <section>
+        <div class="w-full relative p-0">
+          <div
+            class="w-full h-96 p-5 z-0 flex justify-center"
+            style="
+              background:
+                linear-gradient(
+                    rgba(128, 128, 128, 0.628),
+                    rgba(234, 237, 240, 0)
+                  )
+                  0% 0% / cover,
+                url('/images/Highlights/product1.jpg') center center repeat-x;
+              width: unset;
+              height: 80vh !important;
+            "
+          >
+            <div class="w-full py-5">
+              <div class="w-full pt-5 mt-5 text-center">
+                <h1
+                  class="text-5xl text-center mt-32 font-black mb-8 items-center text-white animate__animated animate__zoomIn"
+                >
+                  CONTACT US
+                </h1>
               </div>
             </div>
           </div>
-        </div>
-        <!-- frame end -->
-
-        <div class="flex justify-between w-12 mx-auto pb-2">
-          <button
-            id="sButton1"
-            onclick="sliderButton1()"
-            class="bg-purple-400 rounded-full w-4 pb-2"
-          ></button>
-          <button
-            id="sButton2"
-            onclick="sliderButton2() "
-            class="bg-purple-400 rounded-full w-4 p-2"
-          ></button>
         </div>
       </section>
-      <section class="bg-white" id="contact">
+
+      <section class="bg-[#f7f6f5d9]" id="contact">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div class="mb-4">
             <div
               class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12"
             >
-              <p
-                class="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200"
-              >
-                Contact
-              </p>
               <h2
-                class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl"
+                class="font-heading mb-4 font-bold tracking-tight text-black text-3xl sm:text-5xl"
               >
                 Get in Touch
               </h2>
-              <p
-                class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400"
-              >
-                In hac habitasse platea dictumst
+              <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+                We are more than happy to help you with any queries or concerns.
               </p>
             </div>
           </div>
           <div class="flex items-stretch justify-center">
             <div class="grid md:grid-cols-2">
               <div class="h-full pr-6">
-                <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                  scelerisque sagittis ante, ac tincidunt sem venenatis ut.
+                <p class="mt-3 mb-12 text-lg text-gray-600">
+                  Shivcreation we really value your feedback and suggestions. If
+                  you have any questions or comments, please feel free to
+                  contact us. We will get back to you as soon as possible.
                 </p>
                 <ul class="mb-6 md:mb-0">
                   <li class="flex">
                     <div
-                      class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50"
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -121,22 +84,21 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3
-                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
-                      >
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Our Address
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
-                        1230 Maecenas Street Donec Road
+                      <p class="text-gray-500">
+                        504, Vardhman Heights, opposite Sadhu Vaswani school,
+                        Sadhu Vaswani Road,
                       </p>
-                      <p class="text-gray-600 dark:text-slate-400">
-                        New York, EEUU
+                      <p class="text-gray-600">
+                        Rajkot - 360005, Gujarat, India
                       </p>
                     </div>
                   </li>
                   <li class="flex">
                     <div
-                      class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50"
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -158,22 +120,30 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3
-                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
-                      >
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Contact
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
-                        Mobile: +1 (123) 456-7890
+                      <p class="text-gray-500">
+                        Mobile:
+                        <a
+                          class="hover:underline hover:text-blue-500"
+                          href="tel: +91 90999 40095"
+                          >+91 90999 40095</a
+                        >
                       </p>
-                      <p class="text-gray-600 dark:text-slate-400">
-                        Mail: tailnext@gmail.com
+                      <p class="text-gray-500">
+                        Mail:
+                        <a
+                          class="hover:underline"
+                          href="mailto:info@shivcreation.com"
+                          >info@shivcreation.com</a
+                        >
                       </p>
                     </div>
                   </li>
                   <li class="flex">
                     <div
-                      class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-gray-50"
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -192,15 +162,13 @@
                       </svg>
                     </div>
                     <div class="ml-4 mb-4">
-                      <h3
-                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
-                      >
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
                         Working hours
                       </h3>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gray-600">
                         Monday - Friday: 08:00 - 17:00
                       </p>
-                      <p class="text-gray-600 dark:text-slate-400">
+                      <p class="text-gray-600">
                         Saturday &amp; Sunday: 08:00 - 12:00
                       </p>
                     </div>
@@ -208,64 +176,50 @@
                 </ul>
               </div>
               <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
-                <h2 class="mb-4 text-2xl font-bold dark:text-white">
+                <h2 class="mb-4 text-2xl text-black font-bold">
                   Ready to Get Started?
                 </h2>
-                <form id="contactForm">
-                  <div class="mb-6">
-                    <div class="mx-0 mb-1 sm:mb-4">
-                      <div class="mx-0 mb-1 sm:mb-4">
-                        <label
-                          for="name"
-                          class="pb-1 text-xs uppercase tracking-wider"
-                        ></label
-                        ><input
-                          type="text"
-                          id="name"
-                          autocomplete="given-name"
-                          placeholder="Your name"
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                          name="name"
-                        />
-                      </div>
-                      <div class="mx-0 mb-1 sm:mb-4">
-                        <label
-                          for="email"
-                          class="pb-1 text-xs uppercase tracking-wider"
-                        ></label
-                        ><input
-                          type="email"
-                          id="email"
-                          autocomplete="email"
-                          placeholder="Your email address"
-                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                          name="email"
-                        />
-                      </div>
-                    </div>
-                    <div class="mx-0 mb-1 sm:mb-4">
-                      <label
-                        for="textarea"
-                        class="pb-1 text-xs uppercase tracking-wider"
-                      ></label
-                      ><textarea
-                        id="textarea"
-                        name="textarea"
-                        cols="30"
-                        rows="5"
-                        placeholder="Write your message..."
-                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <button
-                      type="submit"
-                      class="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
-                    >
-                      Send Message
-                    </button>
-                  </div>
+                <!-- feedback div after submitting the form  -->
+                <div
+                  id="feedback"
+                  class="text-center p-1 rounded-sm text-white"
+                ></div>
+                <form
+                  method="post"
+                  action="messages"
+                  id="contact-us"
+                  class="ml-auo space-y-4"
+                >
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="sender"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <textarea
+                    placeholder="Message"
+                    rows="6"
+                    name="content"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="text-white bg-amber-500 hover:bg-amber-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full"
+                  >
+                    Send
+                  </button>
                 </form>
               </div>
             </div>
@@ -278,7 +232,62 @@
     <%- include('./partials/footer.ejs') %>
     <!--==================== Footer ends=========================-->
 
-    <script src="/javascripts/main.js"></script>
     <script src="/javascripts/slider.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-us')
+        const feedbackDiv = document.getElementById('feedback')
+        console.log(form)
+        form.addEventListener('submit', (e) => {
+          e.preventDefault()
+          const formData = new FormData(form)
+          const sender = formData.get('sender')
+          const email = formData.get('email')
+          const subject = formData.get('subject')
+          const content = formData.get('content')
+          const message = {
+            sender,
+            email,
+            subject,
+            content,
+          }
+          // Create a new XMLHttpRequest object
+          const xhr = new XMLHttpRequest()
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              if (xhr.status === 200 || xhr.status === 201) {
+                // Create the paragraph element
+                const successMessage = document.createElement('p')
+                successMessage.classList.add(
+                  'text-2xl',
+                  'text-green-500',
+                  'bg-amber-500',
+                  'p-2',
+                  'rounded-md',
+                  'font-extralight',
+                  'animate__animated',
+                  'animate__pulse',
+                  'animate__faster',
+                  'animate__infinite',
+                )
+                successMessage.textContent = 'The message is sent successfully.'
+                // Append the paragraph element to the feedbackDiv
+                feedbackDiv.appendChild(successMessage)
+                form.reset()
+              } else {
+                console.error('Request failed:', xhr.status)
+              }
+            }
+          }
+
+          // Configure the request
+          xhr.open('POST', 'http://localhost:3000/messages/')
+          xhr.setRequestHeader('Content-Type', 'application/json')
+
+          // Send the request with JSON data
+          xhr.send(JSON.stringify(message))
+        })
+      })
+    </script>
   </body>
 </html>

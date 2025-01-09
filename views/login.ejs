@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <!-- head -->
+  <%- include('./partials/head.ejs', { title: 'Shiv Creations'}) %>
+  <body>
+    <section
+      style="
+        background-image: url('/images/cool-background.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+      "
+      class="bg-gray-50 min-h-screen text-center"
+    >
+      <div
+        class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+      >
+        <div
+          class="w-full bg-gray-100 rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0"
+        >
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl"
+            >
+              SHIV CREATION - ADMIN LOGIN
+            </h1>
+            <form class="space-y-4 md:space-y-16" method="POST" action="login">
+              <div
+                class="error animated bg-red-50 text-red-500 font-bold rounded-sm"
+              ></div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-left mb-2 text-sm font-medium text-gray-900"
+                  >Your email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                  placeholder="example@domain.com"
+                  required=""
+                />
+              </div>
+              <div>
+                <label
+                  for="password"
+                  class="block text-left mb-2 text-sm font-medium text-gray-900"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="••••••••••••••••"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                  required=""
+                />
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-start">
+                  <div class="flex items-center h-5">
+                    <input
+                      id="remember"
+                      aria-describedby="remember"
+                      type="checkbox"
+                      class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300"
+                      required=""
+                    />
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="remember" class="text-gray-500"
+                      >Remember me</label
+                    >
+                  </div>
+                  <div class="ml-3 text-sm font-bold"></div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                style="
+                  background-color: blue;
+                  color: white;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  margin-top: 10px;
+                  width: 100%;
+                  font-size: large;
+                "
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form')
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const email = document.querySelector('#email').value
+        const password = document.querySelector('#password').value
+        const remember = document.querySelector('#remember').checked
+        const error = document.querySelector('.error')
+        error.textContent = ''
+        try {
+          const res = await fetch('/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password, remember }),
+          })
+          const data = await res.json()
+          if (res.ok) {
+            // Redirect to dashboard page
+            window.location.href = '/shiv/dashboard'
+          } else {
+            // Handle error
+            error.textContent = data.error
+          }
+        } catch (err) {
+          error.textContent = 'Something went wrong'
+        }
+      })
+    })
+  </script>
+</html>

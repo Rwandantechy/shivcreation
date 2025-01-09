@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+  <!-- head -->
+
+  <%- include('./partials/head.ejs',{ title: 'Dashboard' }) %>
+  <style>
+    * {
+      font-family: 'Josefin Sans', sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      color: black;
+    }
+  </style>
+  <body class="bg-gray-100">
+    <%- include('./dashboard/components/header.ejs') %> <%-
+    include('./dashboard/components/nav.ejs') %>
+
+    <!-- Main Content -->
+    <div id="content" class="p-4 mt-16 sm:ml-64">
+      <div
+        class="p-4 border-2 border-gray-200 mt-14 border-dashed rounded-lg dark:border-gray-700"
+      >
+        <!-- Admin Dashboard -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Website Traffic Insights -->
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="text-lg text-black font-semibold text-center">
+              Website Traffic
+            </h3>
+            <canvas id="trafficChart"></canvas>
+            <div class="mt-2">
+              <p>Total Visits: <strong>5,000</strong></p>
+              <p>Unique Visitors: <strong>3,000</strong></p>
+            </div>
+          </div>
+
+          <!-- User Engagement -->
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="text-lg text-black font-semibold text-center">
+              User Engagement
+            </h3>
+            <canvas id="engagementChart"></canvas>
+            <div class="mt-2">
+              <p>New Accounts: <strong>45</strong></p>
+              <p>Newsletter Subscriptions: <strong>20</strong></p>
+            </div>
+          </div>
+          <!-- Comments Management -->
+          <div class="bg-white p-4 rounded-lg shadow md:col-span-1">
+            <h3 class="text-lg text-black font-semibold text-center">
+              Comments Management
+            </h3>
+            <div class="mt-2 text-center">
+              <p class="mb-2">Total Comments: <strong>750</strong></p>
+              <canvas id="commentsPieChart"></canvas>
+              <div class="mt-2 flex justify-center">
+                <button
+                  class="bg-green-400 px-3 py-2 hover:bg-green-500 text-white rounded-md outline-double"
+                >
+                  <a href="/shiv/comments"> All Comments </a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Messages Management -->
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h3 class="text-lg text-black font-semibold text-center">
+              Messages Management
+            </h3>
+            <div class="mt-2">
+              <p>Total Messages: <strong>120</strong></p>
+              <p>Unread Messages: <strong>8</strong></p>
+              <canvas id="messagesPieChart" class="mt-4"></canvas>
+              <div class="mt-2 flex justify-center">
+                <button
+                  class="bg-green-400 px-3 py-2 hover:bg-green-500 text-white rounded-md outline-double"
+                >
+                  <a href="/shiv/messages"> See All Messages </a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Creation & Management -->
+          <div class="bg-white p-2 rounded-lg shadow">
+            <h3 class="text-lg text-black font-semibold text-center">
+              Content Creation & Management
+            </h3>
+            <div class="p-4 shadow-inner rounded-xl my-4">
+              <!-- number of blogs -->
+              <h3 class="font-bold text-gray-700 text-center">
+                Total blogs : <strong class="text-amber-500">500</strong>
+              </h3>
+            </div>
+
+            <div class="flex flex-wrap gap-4 justify-center mt-8">
+              <button
+                id="openNewCategoryModal"
+                class="bg-blue-600 text-white px-2 py-2 rounded-lg"
+              >
+                New Category
+              </button>
+              <button class="bg-blue-600 text-white px-2 py-2 rounded-lg">
+                <a href="/shiv/addBlog">Create New Blog</a>
+              </button>
+              <button class="bg-blue-600 text-white px-2 py-2 rounded-lg">
+                <a href="/shiv/blogs">Manage Blogs</a>
+              </button>
+              <button
+                id="openManageCategoryModal"
+                class="bg-blue-600 text-white px-2 py-2 rounded-lg"
+              >
+                Manage Categories
+              </button>
+            </div>
+          </div>
+          <!-- New Category Modal -->
+          <div
+            id="newCategoryModal"
+            class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          >
+            <div class="bg-gray-200 p-8 rounded-lg w-[600px]">
+              <h2 class="text-lg font-semibold mb-4">New Category Form</h2>
+              <h4 class="my-2 italic">
+                This category will contain all blogs that exhibits certain
+                similarities.
+              </h4>
+              <form method="post" action="/category" id="categoryForm">
+                <div class="mb-4">
+                  <label
+                    for="categoryName"
+                    class="block font-blog uppercase text-lg mb-2"
+                    >Category Name</label
+                  >
+                  <input
+                    type="text"
+                    id="categoryName"
+                    name="categoryName"
+                    placeholder="Enter the category name here"
+                    class="w-full border bg-gray-100 border-gray-300 rounded p-2"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="categoryName"
+                    class="block font-blog uppercase text-lg mb-2"
+                    >Category Description</label
+                  >
+                  <textarea
+                    type="text"
+                    id="description"
+                    name="description"
+                    placeholder="Enter the category description here"
+                    class="w-full border bg-gray-100 border-gray-300 rounded p-2"
+                    cols="3"
+                    required
+                  >
+                  </textarea>
+                </div>
+                <div class="flex justify-end">
+                  <button
+                    type="button"
+                    id="closeNewCategoryModal"
+                    class="bg-gray-400 text-white px-3 py-2 rounded-md mr-2"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="bg-blue-600 text-white px-3 py-2 rounded-md"
+                  >
+                    Create
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Manage Category Modal -->
+          <div
+            id="manageCategoryModal"
+            class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+          >
+            <div class="bg-gray-200 px-4 py-3 rounded-lg">
+              <h2 class="text-lg font-semibold mb-4">Manage Categories</h2>
+              <table
+                class="table-auto overflow-auto min-w-full divide-y divide-gray-200"
+              >
+                <thead>
+                  <tr class="bg-gray-400 hover:bg-amber-500">
+                    <th class="px-4 py-2">No</th>
+                    <th class="px-4 py-2">Category Name</th>
+                    <th class="px-4 py-2">Number of Blogs</th>
+                    <th class="px-4 py-2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="categoryTableBody">
+                  <!-- Add your table rows here -->
+                  <tr class="hover:bg-amber-500">
+                    <td class="border px-4 py-2">1</td>
+                    <td class="border px-4 py-2">Mental Health</td>
+                    <td class="border px-4 py-2">100</td>
+                    <td class="border px-4 py-2">
+                      <button
+                        class="bg-blue-600 text-white px-2 py-1 rounded-md"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        class="bg-red-600 text-white px-2 py-1 rounded-md"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- another row -->
+                  <tr class="hover:bg-amber-500">
+                    <td class="border px-4 py-2">2</td>
+                    <td class="border px-4 py-2">Illness of the brain</td>
+                    <td class="border px-4 py-2">200</td>
+                    <td class="border px-4 py-2">
+                      <button
+                        class="bg-blue-600 text-white px-2 py-1 rounded-md"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        class="bg-red-600 text-white px-2 py-1 rounded-md"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button
+                id="closeManageCategoryModal"
+                class="bg-gray-400 mt-4 text-white px-3 py-2 rounded-md"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+
+          <script>
+            // JavaScript to handle modal functionality
+            document.addEventListener('DOMContentLoaded', function () {
+              const openNewCategoryModalButton = document.getElementById(
+                'openNewCategoryModal',
+              )
+              const closeNewCategoryModalButton = document.getElementById(
+                'closeNewCategoryModal',
+              )
+              const newCategoryModal =
+                document.getElementById('newCategoryModal')
+
+              openNewCategoryModalButton.addEventListener('click', () => {
+                newCategoryModal.classList.remove('hidden')
+              })
+
+              closeNewCategoryModalButton.addEventListener('click', () => {
+                newCategoryModal.classList.add('hidden')
+              })
+
+              const openManageCategoryModalButton = document.getElementById(
+                'openManageCategoryModal',
+              )
+              const closeManageCategoryModalButton = document.getElementById(
+                'closeManageCategoryModal',
+              )
+              const manageCategoryModal = document.getElementById(
+                'manageCategoryModal',
+              )
+
+              openManageCategoryModalButton.addEventListener('click', () => {
+                manageCategoryModal.classList.remove('hidden')
+              })
+
+              closeManageCategoryModalButton.addEventListener('click', () => {
+                manageCategoryModal.classList.add('hidden')
+              })
+            })
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- JavaScript to handle sidebar toggle -->
+  <script>
+    const sidebarToggle = document.getElementById('sidebarToggle')
+    const sidebar = document.getElementById('default-sidebar')
+
+    sidebarToggle.addEventListener('click', () => {
+      // Toggle the sidebar visibility
+      sidebar.classList.toggle('-translate-x-full')
+    })
+  </script>
+  <!-- Add JavaScript for Chart.js or another charting library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    
+    // Traffic Chart
+    const trafficData = {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [
+        {
+          label: 'Visits',
+          data: [1200, 800, 300, 1500, 1900],
+          backgroundColor: '#585',
+          borderColor: '#582',
+          borderWidth: 2,
+        },
+        {
+          label: 'Unique Visitors',
+          data: [900, 1000, 1100, 1200, 1300],
+          backgroundColor: 'skyblue',
+          borderColor: 'blue',
+          borderWidth: 1,
+        },
+      ],
+    }
+
+    const trafficOptions = {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    }
+
+    const trafficChart = new Chart(
+      document.getElementById('trafficChart').getContext('2d'),
+      {
+        type: 'bar',
+        data: trafficData,
+        options: trafficOptions,
+      },
+    )
+
+    // Engagement Chart
+    const engagementData = {
+      labels: ['New Accounts', 'Newsletter Subscriptions'],
+      datasets: [
+        {
+          data: [45, 20],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+          ],
+          borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
+        },
+      ],
+    }
+
+    const engagementOptions = {
+      plugins: {
+        legend: {
+          position: 'bottom',
+        },
+      },
+    }
+
+    const engagementChart = new Chart(
+      document.getElementById('engagementChart').getContext('2d'),
+      {
+        type: 'pie',
+        data: engagementData,
+        options: engagementOptions,
+      },
+    )
+
+    // Comments Pie Chart
+    const commentsData = {
+      labels: ['Recent Comments', 'Old Comments'],
+      datasets: [
+        {
+          data: [70, 12],
+
+          backgroundColor: ['rgba(75, 192, 192, 0.6)', 'gray'],
+          borderColor: ['rgba(75, 192, 192, 1)', 'gray'],
+        },
+      ],
+    }
+
+    const commentsPieOptions = {
+      plugins: {
+        legend: {
+          position: 'bottom',
+        },
+      },
+    }
+
+    const commentsPieChart = new Chart(
+      document.getElementById('commentsPieChart').getContext('2d'),
+      {
+        type: 'pie',
+        data: commentsData,
+        options: commentsPieOptions,
+      },
+    )
+
+    // Messages Pie Chart
+    const messagesData = {
+      labels: ['Read', 'Unread'],
+      datasets: [
+        {
+          data: [112, 8],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(255, 99, 132, 0.6)',
+          ],
+          borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+        },
+      ],
+    }
+
+    const messagesPieOptions = {
+      plugins: {
+        legend: {
+          position: 'bottom',
+        },
+      },
+    }
+
+    const messagesPieChart = new Chart(
+      document.getElementById('messagesPieChart').getContext('2d'),
+      {
+        type: 'pie',
+        data: messagesData,
+        options: messagesPieOptions,
+      },
+    )
+  </script>
+</html>

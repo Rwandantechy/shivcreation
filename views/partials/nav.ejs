@@ -1,116 +1,164 @@
-<header
-  class="bg-white shadow-lg border-gray-200 px-2 lg:px-6 py-2 sticky top-0 z-50"
->
-  <nav class="container flex justify-between mx-auto px-6 py-4">
+<header class="ud-header mb-2 absolute left-0 top-0 z-40 flex w-full items-center bg-transparent">
+  <div class="w-full lg:flex justify-between mx-auto items-stretch lg:px-4 lg:py-4 py-2 px-2">
     <!-- Logo -->
-    <div>
-      <a href="/" class="flex items-center text-blue-500">
-        <img src="/images/logo.png" class="h-16 sm:h-10" alt="Logo" />
+    <div class="flex justify-between items-center">
+      <a href="/" class="flex lg:ml-16 items-center">
+        <img src="/images/logo.png" class="w-28 lg:w-40" alt="Logo" />
       </a>
-    </div>
-
-    <div class="flex justify-center items-center flex-1">
       <!-- Mobile Menu Button -->
-      <div class="lg:hidden md:float-right">
-        <button
-          id="mobile-menu-toggle"
-          class="text-gray-700 focus:outline-none"
-        >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+      <div class="lg:hidden md:float-right relative">
+        <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="h-6 w-6 hamburger-icon transition duration-300 ease-in-out transform" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg class="h-6 w-6 cross-icon hidden transition duration-300 ease-in-out transform" fill="blue" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="black">
+            <path d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
-
-      <!-- Desktop Menu -->
-      <div class="hidden lg:flex lg:items-center lg:w-auto" id="desktop-menu">
-        <ul class="flex space-x-8 justify-center gap-2">
-          <li>
-            <a
-              href="/"
-              class="text-gray-700 uppercase active hover:text-[#E56F3F] font-bold"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="about"
-              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
-              >About Us</a
-            >
-          </li>
-          <li>
-            <a
-              href="product"
-              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
-              >Product</a
-            >
-          </li>
-          <li>
-            <a
-              href="blog"
-              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
-              >Blogs</a
-            >
-          </li>
-          <li>
-            <a
-              href="contact"
-              class="text-gray-700 uppercase hover:text-[#E56F3F] font-bold"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div class="hidden lg:hidden" id="mobile-menu">
-        <ul class="mt-4">
-          <li>
-            <a
-              href="/"
-              class="block py-2 text-gray-700 uppercase active hover:text-[#E56F3F] font-medium"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="about"
-              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
-              >About Us</a
-            >
-          </li>
-          <li>
-            <a
-              href="product"	
-              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
-              >Product</a
-            >
-          </li>
-          <li>
-            <a
-              href="blog"
-              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
-              >Blogs</a
-            >
-          </li>
-          <li>
-            <a
-              href="contact"
-              class="block py-2 text-gray-700 uppercase hover:text-[#E56F3F] font-medium"
-              >Contact Us</a
-            >
-          </li>
-        </ul>
-      </div>
     </div>
-  </nav>
+
+    <!-- Desktop Menu -->
+    <nav class="absolute right-4 top-full hidden w-full rounded-lg bg-white shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6 id="desktop-menu">
+      <ul class="flex space-x-8 justify-end gap-5">
+        <li>
+          <a href="/" class="text-black uppercase active hover:text-white font-bold">Home</a>
+        </li>
+        <li>
+          <a href="about" class="text-black uppercase hover:text-white font-bold">Our Story</a>
+        </li>
+        <li>
+          <a href="product" class="text-black uppercase hover:text-white font-bold">Product</a>
+        </li>
+        <li>
+          <a href="blog" class="text-black uppercase hover:text-white font-bold">Blogs</a>
+        </li>
+        <li>
+          <a href="contact" class="text-black uppercase hover:text-white font-bold">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="hidden px-2 w-full lg:hidden" id="mobile-menu">
+      <ul class="mt-2">
+        <li>
+          <a href="/" class="block py-2 text-black uppercase active hover:text-white font-medium">Home</a>
+        </li>
+        <li>
+          <a href="about" class="block py-2 text-black uppercase hover:text-white font-medium">Our Story</a>
+        </li>
+        <li>
+          <a href="product" class="block py-2 text-black uppercase hover:text-white font-medium">Product</a>
+        </li>
+        <li>
+          <a href="blog" class="block py-2 text-black uppercase hover:text-white font-medium">Blogs</a>
+        </li>
+        <li>
+          <a href="contact" class="block py-2 text-black uppercase hover:text-white font-medium">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
+<!-- 
+<script>
+;(function () {
+  'use strict'
+
+  // Get reference to the header element
+  const udHeader = document.querySelector('.ud-header');
+  // get the logo so that we can reduce the size on scroll
+  const logo = document.querySelector('.ud-header img');
+
+  // Initialize stickyPosition
+  let stickyPosition = udHeader.offsetTop;
+
+  // Define a debounce function
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  }
+
+  // Function to recalculate sticky position
+  function recalculateStickyPosition() {
+    stickyPosition = udHeader.offsetTop;
+    handleScroll(); // Trigger scroll handling to adjust the header state
+  }
+
+  // Define a function to handle scroll events
+  function handleScroll() {
+    if (window.pageYOffset > stickyPosition) {
+      udHeader.classList.add('sticky');
+      udHeader.classList.add('bg-amber-500');
+      logo.classList.add('w-16');
+    } else {
+      udHeader.classList.remove('sticky');
+      udHeader.classList.remove('bg-amber-500');
+      logo.classList.remove('w-16');
+    }
+  }
+
+  // Add event listeners
+  window.addEventListener('scroll', debounce(handleScroll, 50));
+  window.addEventListener('resize', debounce(recalculateStickyPosition, 50));
+
+  // Initial calculation of sticky position
+  recalculateStickyPosition();
+})();
+</script> -->
+<script>
+  ;(function () {
+    'use strict';
+  
+    // Get reference to the header element
+    const udHeader = document.querySelector('.ud-header');
+    // get the logo so that we can reduce the size on scroll
+    const logo = document.querySelector('.ud-header img');
+  
+    // Initialize stickyPosition and isSticky
+    let stickyPosition = udHeader.offsetTop;
+    let isSticky = false;
+  
+    // Define a debounce function
+    function debounce(func, wait) {
+      let timeout;
+      return function executedFunction(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), wait);
+      };
+    }
+  
+    // Function to recalculate sticky position
+    function recalculateStickyPosition() {
+      stickyPosition = udHeader.offsetTop;
+      handleScroll(); // Trigger scroll handling to adjust the header state
+    }
+  
+    // Define a function to handle scroll events
+    function handleScroll() {
+      if (window.pageYOffset > stickyPosition && !isSticky) {
+        udHeader.classList.add('sticky', 'bg-amber-500');
+        logo.classList.remove('w-28', 'lg:w-40'); 
+        logo.classList.add('w-16');
+        isSticky = true;
+      } else if (window.pageYOffset <= stickyPosition && isSticky) {
+        udHeader.classList.remove('sticky', 'bg-amber-500');
+        logo.classList.remove('w-16');
+        logo.classList.add('lg:w-40'); 
+        isSticky = false;
+      }
+    }
+  
+    // Add event listeners
+    window.addEventListener('scroll', debounce(handleScroll, 50));
+    window.addEventListener('resize', debounce(recalculateStickyPosition, 50));
+  
+    // Initial calculation of sticky position
+    recalculateStickyPosition();
+  })();
+  </script>
+  

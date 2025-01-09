@@ -1,15 +1,555 @@
 <html>
   <!-- include head.ejs -->
-  <%- include('./partials/head.ejs') %>
+  <%-include('./partials/head.ejs',{ title: 'Our Story || SHIV CREATIONS' })%>
 
   <body>
     <%- include('./partials/nav.ejs') %>
+    <main>
+      <!-- ABOUT US HERO -->
+      <section>
+        <div class="w-full relative p-0">
+          <div
+            class="w-full h-96 p-5 z-0 flex justify-center"
+            style="
+              background:
+                linear-gradient(
+                    rgba(128, 128, 128, 0.628),
+                    rgba(234, 237, 240, 0)
+                  )
+                  0% 0% / cover,
+                url('/images/Highlights/product1.jpg') center center repeat-x;
+              width: unset;
+              height: 80vh !important;
+            "
+          >
+            <div class="w-full py-5">
+              <div class="w-full pt-5 mt-5 text-center">
+                <h1
+                  class="text-5xl text-center mt-32 font-black mb-8 items-center text-white animate__animated animate__zoomIn"
+                >
+                  OUR STORY
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <main class="lg:mx-8"></main>
+      <!-- Content section -->
+      <section
+        class="bg-amber-100 border-t-8 border-amber-100 flex justify-center"
+      >
+        <div class="mx-auto gap-2 flex flex-col lg:flex-row">
+          <!-- Left side: Main content -->
+          <div class="lg:w-1/2 w-full mb-8 lg:mb-0">
+            <!-- smei-grid  -->
+            <div class="mb-8 lg:px-12 px-2">
+              <h2
+                class="text-3xl mt-8 font-semibold text-center mb-4 text-gray-800"
+              >
+                Inspiration Behind The Creation of Gratitude Tree Kit
+              </h2>
+              <p
+                class="text-lg lg:leading-10 leading-relaxed mb-4 text-justify text-gray-600"
+              >
+                When I volunteered at a local spiritual study center I saw their
+                people from diverse backgrounds. Many faced challenges and
+                hardships, during their experience sharing session one person
+                confided that even amidst struggles, fostering gratitude could
+                improve his resilience and well-being. Witnessing the impact on
+                his well-being sparked my desire to make this practice
+                accessible to others. It led me to design the Gratitude Tree
+                Kit, incorporating interactive elements and creative prompts to
+                explore gratitude in a fun and engaging way, fostering emotional
+                well-being and positive life skills.
+              </p>
+            </div>
+
+            <h2
+              class="text-3xl mt-8 font-semibold text-center mb-4 text-gray-800"
+            >
+              Our Mission
+            </h2>
+            <p
+              class="text-lg lg:px-12 px-2 leading-10 mb-4 text-justify text-gray-600"
+            >
+              Our mission is to inspire and empower individuals to cultivate a
+              daily practice of gratitude. We believe that gratitude is a
+              powerful tool for enhancing emotional well-being, fostering
+              resilience, and promoting positive life skills. Through our
+              Gratitude Tree Kit, we aim to provide a creative and engaging way
+              for people of all ages to explore gratitude and experience its
+              transformative effects.
+            </p>
+          </div>
+
+          <div class="lg:w-1/2 w-full">
+            <img
+              src="/images/highlights/tree-about.jpg"
+              alt="Gratitude Tree"
+              class="w-full object-contain object-center"
+            />
+          </div>
+        </div>
+      </section>
+      <!--==================== Testimonials start=========================-->
+
+      <section class="bg-[#f5f2f2]" id="Testimonial" data-wow-delay="0.1s">
+        <div class="py-5 px-8">
+          <div
+            class="text-center position-relative pb-3 mb-4 mx-auto"
+            style="max-width: 600px"
+          >
+            <h5
+              class="text-3xl font-semibold mb-4 text-center mt-4 text-gray-800"
+            >
+              Testimonial
+            </h5>
+            <h1 class="lg:mb-4 text-gray-700">
+              What Our Clients Say About Our Services
+            </h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-home testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full object-center object-contain h-20 w-20"
+                      src="/images/client1.jpg"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Client 1 Name</h4>
+                    <p class="text-sm text-gray-600">
+                      Placeholder of profession or something else
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has been a game-changer in my daily
+                  routine. It's a beautiful and meaningful way to cultivate a
+                  habit of gratitude.
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full h-20 w-20"
+                      src="/images/client2.png"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Client 2</h4>
+                    <p class="text-sm text-gray-600">
+                      Placeholder of profession or something else
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  This kit is a wonderful gift for anyone looking to bring more
+                  positivity and mindfulness into their life. Highly recommend!
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full object-center object-contain h-20 w-20"
+                      src="/images/client1.jpg"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Client 1 Name</h4>
+                    <p class="text-sm text-gray-600">
+                      Placeholder of profession or something else
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has been a game-changer in my daily
+                  routine. It's a beautiful and meaningful way to cultivate a
+                  habit of gratitude.
+                </p>
+              </div>
+            </div>
+
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full h-20 w-20"
+                      src="/images/client3.png"
+                      alt="Client 3 Image"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Innocent Niyonzima</h4>
+                    <p class="text-sm text-gray-600">
+                      Marwadi University Alumni- RWANDA
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has transformed my outlook on life. I
+                  now appreciate the little things and feel more content
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== Testimonials ends=========================-->
+      <section
+        class="bg-gradient-to-r from-orange-50 via-orange-100 to-amber-200 py-8"
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-semibold mb-6 text-center text-gray-800">
+            10 FAQs
+          </h2>
+          <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  How do I set up the Gratitude Tree?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                To set up the Gratitude Tree, start by assembling the decorative
+                tree according to the instructions provided. Then, attach the
+                leaves or ornaments to the branches. Place the tree in a
+                prominent location where you can easily add notes of gratitude
+                each day.
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  How do I use the 21-Day Challenge sheet?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                The 21-Day Challenge sheet provides daily prompts to guide your
+                gratitude practice. Each day, reflect on the prompt and write
+                your response on the sheet or on a note to attach to the tree.
+                The challenge helps you establish a consistent habit of
+                gratitude.
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  How do I maintain my Gratitude Tree Kit?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                To maintain your Gratitude Tree Kit, keep it in a safe location
+                where it won't be easily knocked over. Regularly clean the tree
+                and its components with a soft cloth. Ensure the leaves or
+                ornaments are securely attached and replace them as needed.
+              </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  How many Leaves are there in the Kit?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                We give your the kit with 30 Leaves to use with 21-Day Challenge
+                sheet.
+              </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  Is the Gratitude Tree Kit suitable for all ages?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                The Gratitude Tree Kit is suitable for individuals of all ages,
+                from children to adults. It offers a universal and engaging way
+                to practice gratitude regardless of age.
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  Can I purchase the Gratitude Tree Kit as a gift for someone
+                  else?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                Yes, the Gratitude Tree Kit makes for a thoughtful and
+                meaningful gift. Whether for a friend, family member, or
+                colleague, it's a unique gesture that can bring positivity and
+                joy to their life.
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  What are the dimensions of the Gratitude Tree?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                The Gratitude Tree dimensions are 8.5 x 8.5 x 12 inches (L x W x
+                H) , the tree itself is 6.4 inches tall, and the base is 8.5
+                inches in diameter with leaves measuring 2.5 x 2.5 inches each .
+                It's designed to fit comfortably in various spaces, serving as a
+                beautiful reminder of gratitude and appreciation.
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  Are the leaves reusable?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                Yes, the leaves in the Gratitude Tree Kit are reusable. Simply
+                erase or replace your previous notes of gratitude to continue
+                using them throughout your gratitude journey.
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  Is the Gratitude Tree Kit customizable?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                At the moment, the Gratitude Tree Kit is not customizable.
+                However, we continuously explore ways to enhance our products
+                and may consider customization options in the future.
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                type="button"
+                class="w-full flex justify-between items-center p-4 text-left bg-white hover:bg-orange-200"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="font-semibold text-gray-800">
+                  How can I clean or maintain the Gratitude Tree?
+                </span>
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="answer hidden p-4 bg-white text-gray-700">
+                To clean and maintain your Gratitude Tree, gently dust the tree
+                and leaves with a soft cloth. Avoid using harsh chemicals or
+                abrasive materials that may damage the surface. Store the tree
+                in a dry and safe place when not in use to preserve its
+                appearance and longevity.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!--==================== Footer starts=========================-->
     <%- include('./partials/footer.ejs') %>
     <!--==================== Footer ends=========================-->
   </body>
+
+  <script>
+    function toggleAccordion(button) {
+      const answer = button.nextElementSibling
+      const icon = button.querySelector('svg')
+
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden')
+        icon.classList.add('transform', 'rotate-180')
+      } else {
+        answer.classList.add('hidden')
+        icon.classList.remove('transform', 'rotate-180')
+      }
+    }
+  </script>
   <script src="/javascripts/main.js"></script>
 </html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Head content including Tailwind CSS import -->
+    <%- include('./partials/head.ejs', { title: 'Messages' }) %>
+  </head>
+
+  <body class="bg-slate-300 min-h-screen">
+    <!-- Header -->
+    <%- include('./dashboard/components/header.ejs') %>
+
+    <!-- Sidebar -->
+    <%- include('./dashboard/components/nav.ejs') %>
+
+    <!-- Main Content -->
+    <div class="p-4 mt-16 h-full sm:ml-64">
+      <div
+        class="p-4 border-2 border-gray-200 mt-14 border-dashed rounded-lg overflow-auto dark:border-gray-700"
+      >
+        <table
+          id="messages"
+          class="table-auto overflow-auto min-w-full divide-y divide-gray-200"
+        >
+          <thead class="bg-gray-200">
+            <tr>
+              <th
+                class="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Sender
+              </th>
+              <th
+                class="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Date
+              </th>
+              <th
+                class="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Message
+              </th>
+              <th
+                class="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider"
+              >
+                Actions
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <!-- Iterate over messages -->
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div class="font-medium">John Doe</div>
+                <div class="text-xs text-gray-500">
+                  niyinnocent2027@gmail.com
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm min-w-56 text-gray-800">
+                <div>
+                  April 29, 2024
+                  <span class="italic text-xs text-gray-500"
+                    >at 12:00 PM IST</span
+                  >
+                </div>
+                <span
+                  class="bg-green-100 text-green-800 rounded-full px-2 py-1 text-xs"
+                >
+                  New
+                </span>
+              </td>
+              <td class="px-4 py-4 min-w-56 text-sm text-gray-800">
+                <div>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </td>
+              <td class="px-4 py-4 text-sm text-gray-800">
+                <button
+                  class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full transition duration-200"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

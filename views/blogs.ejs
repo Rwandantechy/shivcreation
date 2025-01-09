@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+  <!-- head -->
+
+  <%- include('./partials/head.ejs',{ title: 'Admin ||Blogs' }) %>
+
+  <body class="bg-slate-300 min-h-screen">
+    <!-- header -->
+    <%- include('./dashboard/components/header.ejs') %>
+
+    <!-- sidebar -->
+    <%- include('./dashboard/components/nav.ejs') %>
+
+    <!-- Main Content -->
+    <div class="p-4 mt-16 h-full sm:ml-64">
+      <div
+        class="p-4 border-2 border-gray-200 mt-14 border-dashed rounded-lg dark:border-gray-700"
+      >
+        <div class="container bg-gray-200 rounded-t-md p-2">
+          <div class="py-8">
+            <div class="items-center">
+              <h1 class="text-2xl font-semibold leading-tight">
+                BLOGS MANAGEMENT
+              </h1>
+            </div>
+            <div
+              class="my-2 flex flex-col sm:flex-row justify-between gap-3 items-center"
+            >
+              <!-- Search Input and Button -->
+              <div class="flex flex-col sm:flex-row flex-1 items-center w-full">
+                <div class="relative w-full flex mb-2 sm:mb-0">
+                  <input
+                    type="text"
+                    class="w-3/4 rounded-l-lg border border-gray-300 bg-white text-gray-800 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 ease-in-out"
+                    placeholder="Search..."
+                  />
+                  <button
+                    class="w-full sm:w-auto rounded-r-lg lg:px-4 px-2 bg-blue-500 text-white font-bold py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+
+              <!-- "Create New Blog" Button -->
+              <div class="mt-2 sm:mt-0">
+                <a
+                  href="/admin/addBlog"
+                  class="w-full sm:w-auto rounded-lg bg-blue-500 text-white font-bold py-2 px-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+                >
+                  Create New Blog
+                </a>
+              </div>
+            </div>
+
+            <div class="px-4 sm:px-8 py-4">
+              <div
+                class="inline-block h-full w-full rounded-lg shadow overflow-x-auto max-w-full"
+              >
+                <table
+                  class="table-auto rtl:text-right leading-normal min-w-full w-full table-layout-auto"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        class="px-4 py-3 border-b-2 bg-gray-500 text-left text-sm font-bold text-white tracking-wider w-1/4"
+                      >
+                        Blog
+                      </th>
+                      <th
+                        class="px-4 py-3 border-b-2 bg-gray-500 text-left text-sm font-bold text-white tracking-wider w-1/5"
+                      >
+                        Category
+                      </th>
+                      <th
+                        class="px-4 py-3 border-b-2 bg-gray-500 text-left text-sm font-bold text-white tracking-wider w-1/5"
+                      >
+                        Date
+                      </th>
+                      <th
+                        class="px-4 py-3 border-b-2 bg-gray-500 text-left text-sm font-bold text-white tracking-wider w-1/6"
+                      >
+                        Status
+                      </th>
+                      <th
+                        class="px-4 py-3 border-b-2 bg-gray-500 text-left text-sm font-bold text-white tracking-wider w-1/6"
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b">
+                      <td class="px-4 py-5 min-w-56 whitespace-normal">
+                        <div class="flex items-center space-x-2">
+                          <img
+                            class="w-12 h-12 rounded"
+                            src="/images/tree2.png"
+                            alt="blog image"
+                          />
+                          <p class="text-sm text-gray-900">
+                            Take care of your mental health
+                          </p>
+                        </div>
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/5">
+                        Mental Issues
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 italic w-1/5">
+                        March 21, 2024
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/6">
+                        <span
+                          class="bg-green-200 text-green-800 px-2 py-1 rounded-full"
+                        >
+                          Published
+                        </span>
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/6">
+                        <div class="flex space-x-2">
+                          <a
+                            href="/blogs/edit"
+                            class="bg-blue-500 text-white rounded px-3 py-1 hover:bg-blue-600"
+                          >
+                            Edit
+                          </a>
+                          <a
+                            href="/blogs/delete"
+                            class="bg-red-500 text-white rounded px-3 py-1 hover:bg-red-600"
+                          >
+                            Delete
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+                      <td class="px-4 py-5 min-w-56 whitespace-normal">
+                        <div class="flex items -center space-x-2">
+                          <img
+                            class="w-12 h-12 rounded"
+                            src="/images/tree2.png"
+                            alt="blog image"
+                          />
+                          <p class="text-sm text-gray-900">
+                            Gratitude really matters in life
+                          </p>
+                        </div>
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/5">
+                        Mental Health
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 italic w-1/5">
+                        March 21, 2024
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/6">
+                        <span
+                          class="bg-green-200 text-green-800 px-2 py-1 rounded-full"
+                        >
+                          Published
+                        </span>
+                      </td>
+                      <td class="px-4 py-5 text-sm text-gray-900 w-1/6">
+                        <div class="flex space-x-2">
+                          <a
+                            href="/blogs/edit"
+                            class="bg-blue-500 text-white rounded px-3 py-1 hover:bg-blue-600"
+                          >
+                            Edit
+                          </a>
+                          <a
+                            href="/blogs/delete"
+                            class="bg-red-500 text-white rounded px-3 py-1 hover:bg-red-600"
+                          >
+                            Delete
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="5">
+                        <div
+                          class="w-full flex flex-col items-center sm:flex-row justify-between px-5 py-5 bg-gray-100 border-t"
+                        >
+                          <span class="text-sm text-gray-700">
+                            Showing 1 to 4 of 50 Entries
+                          </span>
+                          <div class="flex space-x-2 mt-2 sm:mt-0">
+                            <button
+                              class="bg-white hover:bg-gray-300 text-gray-800 text-sm font-semibold py-2 px-3 rounded"
+                            >
+                              Prev
+                            </button>
+                            <button
+                              class="bg-white hover:bg-gray-300 text-gray-800 text-sm font-semibold py-2 px-3 rounded"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="/js/populateBlogs.js"></script> -->
+</html>

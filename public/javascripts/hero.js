@@ -1,65 +1,94 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const sliderContainer = document.getElementById('sliderContainer')
-  let currentSlideIndex = 0 
+  const carousel = document.getElementById('default-carousel')
+  const slides = carousel.querySelectorAll('[data-carousel-item]')
+  const prevButton = carousel.querySelector('[data-carousel-prev]')
+  const nextButton = carousel.querySelector('[data-carousel-next]')
+  const indicators = carousel.querySelectorAll('[data-carousel-slide-to]')
 
-  // Sample data for images and punch lines
-  const slides = [
-    {
-      imageUrl: '/images/New_Tree_Leaves.jpg',
+  let currentSlide = 0
+  let intervalId // Variable to hold the interval ID for auto-sliding
 
-      punchLine: 'Leaves of Gratitude, Branches of Happiness',
-    },
-    {
-      imageUrl: '/images/New_Tree_No_Leaves.jpg',
-      punchLine: 'Rooted in Gratitude, Branching Out to Joy',
-    },
-    {
-      imageUrl: '/images/New_Leaves_heavy.png',
-      punchLine: 'The Leaves of Gratitude',
-    },
-    {
-      imageUrl: '/images/Treekit_Sheet.jpg',
-      punchLine: '',
-    },
-  ]
-
-  // Function to show current slide
   function showSlide(index) {
-    const sliders = document.querySelectorAll('.slider')
-    sliders.forEach((slider, idx) => {
-      if (idx === index) {
-        slider.style.display = 'block' 
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none'
+    })
+    updateIndicators(index)
+    currentSlide = index
+  }
+
+  function updateIndicators(index) {
+    indicators.forEach((indicator, i) => {
+      const isActive = i === index
+      indicator.setAttribute('aria-current', isActive ? 'true' : 'false')
+      indicator.classList.toggle('active', isActive)
+      if (isActive) {
+        indicator.classList.remove('bg-gray-400')
+        indicator.classList.add(
+          'bg-blue-500',
+          'border-2',
+          'border-orange-500',
+          'w-5',
+          'h-5',
+          'rounded-full',
+        )
       } else {
-        slider.style.display = 'none' 
+        indicator.classList.remove(
+          'bg-blue-500',
+          'border-2',
+          'border-orange-500',
+          'w-5',
+          'h-5',
+          'rounded-full',
+        )
+        indicator.classList.add('bg-gray-400', 'w-4', 'h-4', 'rounded-full')
       }
     })
   }
 
-  slides.forEach((slide, index) => {
-    const slider = document.createElement('div')
-    slider.className = 'slider'
-    slider.id = `slider-${index + 1}`
+  function goToSlide(index) {
+    if (index < 0) {
+      currentSlide = slides.length - 1
+    } else if (index >= slides.length) {
+      currentSlide = 0
+    } else {
+      currentSlide = index
+    }
+    showSlide(currentSlide)
+    resetTimer() // Reset the timer after each manual slide change
+  }
 
-    const backgroundImage = document.createElement('div')
-    backgroundImage.className = 'slider-bg'
-    backgroundImage.style.backgroundImage = `url('${slide.imageUrl}')`
+  function startAutoSlide() {
+    intervalId = setInterval(() => {
+      goToSlide(currentSlide + 1)
+    }, 5000) // Adjust the interval duration as needed (currently set to 5 seconds)
+  }
 
-    const content = document.createElement('div')
-    content.className = 'slider-content'
+  function stopAutoSlide() {
+    clearInterval(intervalId)
+  }
 
-    const punchLineText = document.createElement('span')
-    punchLineText.textContent = slide.punchLine
-    punchLineText.className =
-      'text-font-bold animate__animated animate__backInLeft'
+  function resetTimer() {
+    stopAutoSlide()
+    startAutoSlide()
+  }
 
-    content.appendChild(punchLineText)
-
-    slider.appendChild(backgroundImage)
-    slider.appendChild(content)
-
-    sliderContainer.appendChild(slider)
+  prevButton.addEventListener('click', () => {
+    goToSlide(currentSlide - 1)
   })
 
+  nextButton.addEventListener('click', () => {
+    goToSlide(currentSlide + 1)
+  })
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      goToSlide(index)
+    })
+  })
+
+  // Start auto-slide when the page loads
+  startAutoSlide()
+
   // Show the initial slide
-  showSlide(currentSlideIndex)
+  showSlide(currentSlide)
 })

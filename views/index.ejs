@@ -1,68 +1,259 @@
 <html>
   <!-- include head.ejs -->
-  <%- include('./partials/head.ejs') %>
+  <%-include('./partials/head.ejs',{ title: 'HOME || SHIV CREATIONS' })%>
 
-  <body class="">
+  <body>
     <%- include('./partials/nav.ejs') %>
 
-    <main class="lg:mx-8">
-      <!--==================================Hero Section Starts===============-->
-      <section class="hero-section">
-        <div class="slider-container sliderAx" id="sliderContainer">
-          <!-- Sliders will be added dynamically here -->
+    <!-- ===============Hero section starts ======================== -->
+    <div
+      id="default-carousel"
+      class="relative w-full max-h-screen overflow-hidden hero"
+      data-carousel="slide"
+    >
+      <!-- Carousel wrapper -->
+      <div class="relative images p-2">
+        <!-- Item 1 -->
+        <div class="" data-carousel-item>
+          <img
+            src="/images/tree with leaves1.png"
+            class="object-cover h-full sm:scale-75 w-full object-center"
+            alt="Tree with leaves"
+          />
         </div>
-      </section>
-
-      <!--==================== Hero Section End=========================-->
-
+        <!-- Item 2 -->
+        <div class="" data-carousel-item>
+          <img
+            src="/images/highlights/leaves.png"
+            class="object-contain h-full w-full object-fit: scale-down"
+            alt="..."
+          />
+        </div>
+        <!-- Item 3 -->
+        <div class="" data-carousel-item>
+          <img
+            src="/images/highlights/tree without leaves.png"
+            class="object-contain h-full w-full object-fit:scale-down"
+            alt="..."
+          />
+        </div>
+        <!-- Item 4 -->
+        <div class="" data-carousel-item>
+          <img
+            src="/images/highlights/sample.png"
+            class="object-contain h-full w-full object-fit: scale-down"
+            alt="..."
+          />
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div
+        class="absolute z-10 flex bottom-0 left-1/2 space-x-5 rtl:space-x-reverse"
+      >
+        <!-- button 1 -->
+        <button
+          type="button"
+          class=""
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <!-- button 2 -->
+        <button
+          type="button"
+          class=" "
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <!-- button 3 -->
+        <button
+          type="button"
+          class="  "
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+        <!-- button 4 -->
+        <button
+          type="button"
+          class=" "
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"
+        ></button>
+      </div>
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+    <!--==================== Hero Section End=========================-->
+    <main class="w-full overflow-hidden">
       <!-- ======================Introduction starts ========================== -->
-      <section class="bg-gray-50 relative py-12">
-        <div class="flex flex-wrap">
+      <section
+        class="relative bg-slate-100 shadow-inner border-t-2 border-[#f5f8f9] mx-auto"
+      >
+        <div class="flex flex-wrap lg:mx-6 mx-1">
           <div class="lg:w-1/2 animate__animated animate__backInLeft">
-            <h2
-              class="text-4xl text-start font-extrabold lg:px-8 leading-10 lg:mx-4 mx-2 text-[#F89D1C]"
-            >
-              Gratitude Tree Kit : Embrace the Power of Thankfulness
-            </h2>
-            <p class="text-lg leading-10 lg:p-8 italic text-gray-700 lg:m-4 m-2">
-              This enchanting gratitude tree Kit lets you express your gratitude
-              through a fun and creative approach.
-            </p>
-            <h3
-              class="text-2xl text-center font-extrabold lg:px-8 leading-2 lg:mx-4 mx-2 text-[#F89D1C] animate__animated animate__wobble animate__slow"
-            >
-             All About the Gratitude Tree Kit
-            </h3>
-            <p class="text-md leading-8 lg:p-8 text-gray-500 text-justify lg:m-4 m-2">
-              The Gratitude Tree Kit is a unique and interactive tool designed
-              to help you cultivate gratitude in your everyday life. It serves
-              as a visual reminder to appreciate the small and big things that
-              bring joy, fulfillment, and positivity. Made with love and care,
-              this enchanting 3D tree is adorned with vibrant leaves, each
-              representing a moment of gratitude. We have also included a 21-day
-              gratitude challenge sheet to help you deepen your practice.In
-              21-day gratitude challenge sheet each day for 21 days , you will
-              have a new prompt to reflect on and express gratitude for. As per
-              given prompt on each day for 21 days simply write down what you
-              are thankful for on the leaves and place them on the branches of
-              gratitude tree.
-            </p>
+            <h1 class="text-4xl font-semibold my-3 text-pretty text-gray-800">
+              What is Gratitude Tree Kit ?
+            </h1>
             <div
-              class="flex lg:justify-start justify-center lg:mx-10 mx-2 my-6 gap-4"
+              class="bg-transparent shadow-sm grid lg:grid-cols-3 gap-0 grid-cols-1"
             >
-              <button
-                title="buy the tree kit button"
-                class="bg-[#F89D1C] fancy-border mybutton hover:bg-blue-700 text-white font-bold lg:py-4 lg:px-8 py-4 px-4 rounded"
-              >
-                <a href="/product">Buy the Kit </a>
-              </button>
+              <!-- card 1 -->
+              <div class="p-2 flex flex-row gap-1 border border-[#f5f2f2]">
+                <div
+                  class="lg:w-1/6 w-8 items-center h-8 text-center font-extrabold text-xl text-black rounded-lg shadow-2xl bg-blue-200"
+                >
+                  1
+                </div>
+                <div class="w-4/5">
+                  <h2 class="text-black font-extrabold text-start">
+                    Unique Tool to cultivate gratitude
+                  </h2>
+                  <p class="py-2 text-gray-600 text-balance">
+                    The Gratitude Tree Kit is a unique tool designed to help you
+                    cultivate a daily practice of gratitude.
+                  </p>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="p-2 flex flex-row gap-1 border border-[#f5f2f2]">
+                <div
+                  class="lg:w-1/6 w-8 items-center h-8 text-center font-extrabold text-xl text-black rounded-lg shadow-2xl bg-blue-200"
+                >
+                  2
+                </div>
+                <div class="w-4/5">
+                  <h2 class="text-black font-extrabold text-start">
+                    Tree-shaped Display
+                  </h2>
+                  <p class="py-2 text-gray-600 text-balance">
+                    It consists of a beautiful tree-shaped display that serves
+                    as a visual representation of your gratitude journey
+                  </p>
+                </div>
+              </div>
+              <!-- card 3 -->
+
+              <div class="p-2 flex flex-wrap gap-1 border border-[#f5f2f2]">
+                <div
+                  class="lg:w-1/6 w-8 items-center h-8 text-center font-extrabold text-xl text-black rounded-lg shadow-2xl bg-blue-200"
+                >
+                  3
+                </div>
+                <div class="w-4/5">
+                  <h2 class="text-black font-extrabold text-start">
+                    Vibrant Leaves
+                  </h2>
+                  <p class="py-2 text-gray-600 text-balance">
+                    The kit also includes a set of Vibrant leaves, allowing you
+                    to write down something you are grateful for each day.
+                  </p>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="p-1 mb-1 flex flex-row gap-1 border border-[#f5f2f2]">
+                <div
+                  class="lg:w-1/6 w-8 items-center h-8 text-center font-extrabold text-xl text-black rounded-lg shadow-2xl bg-blue-200"
+                >
+                  4
+                </div>
+                <div class="w-4/5">
+                  <h2 class="text-black font-extrabold text-start">
+                    21 – Day Gratitude Challenge Sheet
+                  </h2>
+                  <p class="py-2 text-gray-600 text-balance">
+                    In 21-day Gratitude Challenge sheet each day, you'll receive
+                    simple prompts and to help you cultivate a consistent
+                    gratitude practice.
+                  </p>
+                </div>
+              </div>
+              <!-- card 5 -->
+              <div class="p-1 mb-1 flex flex-row gap-1 border border-[#f5f2f2]">
+                <div
+                  class="lg:w-1/6 w-8 items-center h-8 text-center font-extrabold text-xl text-black rounded-lg shadow-2xl bg-blue-200"
+                >
+                  5
+                </div>
+                <div class="w-4/5">
+                  <h2 class="text-black font-extrabold text-start">
+                    Transformative Power
+                  </h2>
+                  <p class="py-2 text-gray-600 text-balance">
+                    Regular engagement with the Gratitude Tree Kit can help you
+                    experience the transformative power of gratitude.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            <button
+              title="Buy the Tree Kit"
+              class="inline-block lg:px-12 px-10 py-3 mb-4 text-2xl rounded-md bg-amber-500 text-white font-semibold hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 lg:mt-6 mt-4"
+            >
+              <a target="_blank" href="https://www.amazon.in/"
+                >Buy the Tree Kit</a
+              >
+            </button>
           </div>
           <!-- Video Container -->
-          <div class="lg:w-1/2 lg:mx-0 mx-2 md:w-full p-4">
+          <div class="lg:w-1/2 lg:my-16 my-4 mx-auto w-full">
             <video
               controls
-              class="w-full rounded-sm border-2 border-amber-500"
+              class="w-full rounded-none border-6 border-white"
               poster="/images/tumbnail.jpg"
               height="50%"
             >
@@ -74,1194 +265,579 @@
       </section>
       <!-- ================== End of Introduction=================== -->
 
-      <!-- ========================How to Use the product starts==========-->
-      <section
-        class="px-5 sm:px-10 md:px-16 lg:px-8 xl:px-16 py-8 shadow-2xl bg-slate-50"
-        id="HOW TO USE"
-      >
-        <div class="max-w-screen-xl mx-auto">
-          <h3
-            class="leading-none text-center text-[#F89D1C] animate__animated animate__backInRight font-black text-3xl"
-          >
-            HOW TO USE THE TREE
-          </h3>
-
-          <div
-            class="flex flex-col items-center flex-wrap lg:flex-row lg:items-stretch lg:flex-no-wrap lg:justify-between"
-          >
-            <div
-              class="w-full max-w-sm mt-6 lg:mt-8 overflow-hidden animate__animated animate__backInDown bg-white rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12"
-            >
-              <div class="p-5 flex justify-center rounded-lg">
-                <svg
-                  width="68px"
-                  height="68px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#4a5568"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M11.9805 17H13.9561V7.0332H13.7441L9.62207 8.50977V10.1162L11.9805 9.38477V17Z"
-                      fill="#F89D1C"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
-                      fill="#F89D1C"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <div
-                class="mt-4 font-extrabold text-[#F89D1C] text-center text-2xl tracking-wide"
-              >
-                Gratitude Tree Starter
-              </div>
-              <div class="text-md text-black text-justify leading-8">
-                You need to have a tree to start your gratitude journey. You can
-                buy the tree from our store. and that tree symbolizes the step
-                towards thinking and meditating about the things you are
-                grateful for.
-              </div>
-            </div>
-
-            <div
-              class="w-full max-w-sm mt-8 overflow-hidden animate__animated animate__backInDown bg-white rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12"
-            >
-              <div class="p-4 flex justify-center rounded-lg">
-                <svg
-                  width="68px"
-                  height="68px"
-                  viewBox="-1.44 -1.44 26.88 26.88"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#4a5568"
-                  stroke-width="1.128"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M9.15723 17H15.9795V15.4072H11.7002L13.9629 13.0215C14.5827 12.3424 15.0202 11.7477 15.2754 11.2373C15.5306 10.7269 15.6582 10.2256 15.6582 9.7334C15.6582 8.83561 15.3734 8.14062 14.8037 7.64844C14.2386 7.15625 13.4434 6.91016 12.418 6.91016C11.748 6.91016 11.1488 7.05371 10.6201 7.34082C10.0915 7.62337 9.68131 8.0153 9.38965 8.5166C9.10254 9.0179 8.95898 9.57161 8.95898 10.1777H10.9414C10.9414 9.67643 11.069 9.27311 11.3242 8.96777C11.584 8.65788 11.9372 8.50293 12.3838 8.50293C12.7985 8.50293 13.1175 8.63053 13.3408 8.88574C13.5641 9.13639 13.6758 9.48275 13.6758 9.9248C13.6758 10.2484 13.5687 10.5902 13.3545 10.9502C13.1449 11.3102 12.819 11.7318 12.377 12.2148L9.15723 15.6465V17Z"
-                      fill="#F89D1C"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
-                      fill="#F89D1C"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <div
-                class="mt-4 font-extrabold text-[#F89D1C] text-center text-2xl tracking-wide"
-              >
-                Gratitude Leaves
-              </div>
-              <div class="text-md text-black text-justify leading-8">
-                These leaves serve as a reminder of the things you are grateful
-                for. You can write down the things you are grateful for on these
-                leaves and hang them on the tree. what you write on these leaves
-                will help you to be more positive and happy in your life.
-              </div>
-            </div>
-
-            <div
-              class="w-full max-w-sm mt-8 bg-white rounded shadow-lg p-12 lg:p-8 lg:mx-4 xl:p-12 overflow-hidden animate__animated animate__backInDown"
-            >
-              <div class="p-4 flex justify-center rounded-lg">
-                <svg
-                  width="68px"
-                  height="68px"
-                  viewBox="-1.92 -1.92 27.84 27.84"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="#4a5568"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M12.2197 11.1484H11.167V12.6934H12.2129C13.3066 12.6934 13.8535 13.1901 13.8535 14.1836C13.8535 14.5938 13.7191 14.9242 13.4502 15.1748C13.1859 15.4209 12.819 15.5439 12.3496 15.5439C11.9395 15.5439 11.5931 15.4255 11.3105 15.1885C11.0326 14.9515 10.8936 14.6462 10.8936 14.2725H8.91797C8.91797 15.1338 9.23242 15.8265 9.86133 16.3506C10.4948 16.8747 11.3083 17.1367 12.3018 17.1367C13.3636 17.1367 14.2158 16.8701 14.8584 16.3369C15.5055 15.8037 15.8291 15.0951 15.8291 14.2109C15.8291 13.6641 15.6901 13.1901 15.4121 12.7891C15.1387 12.388 14.7217 12.0872 14.1611 11.8867C14.6123 11.6816 14.9769 11.3877 15.2549 11.0049C15.5329 10.6221 15.6719 10.2028 15.6719 9.74707C15.6719 8.86296 15.3734 8.17025 14.7764 7.66895C14.1794 7.16309 13.3545 6.91016 12.3018 6.91016C11.6956 6.91016 11.1396 7.02637 10.6338 7.25879C10.1325 7.49121 9.74056 7.81478 9.45801 8.22949C9.18001 8.63965 9.04102 9.10449 9.04102 9.62402H11.0166C11.0166 9.29134 11.1442 9.02246 11.3994 8.81738C11.6546 8.60775 11.9714 8.50293 12.3496 8.50293C12.7689 8.50293 13.097 8.61458 13.334 8.83789C13.5755 9.0612 13.6963 9.37337 13.6963 9.77441C13.6963 10.1891 13.5755 10.5218 13.334 10.7725C13.0924 11.0231 12.721 11.1484 12.2197 11.1484Z"
-                      fill="#F89D1C"
-                    ></path>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
-                      fill="#F89D1C"
-                    ></path>
-                  </g>
-                </svg>
-              </div>
-              <div
-                class="mt-4 font-extrabold text-[#F89D1C] text-center text-2xl tracking-wide"
-              >
-                21 Days Gratitude Challenge
-              </div>
-              <div class="text-md text-black text-justify leading-8">
-                21 days gratitude challenge is a challenge that you can take to
-                practice gratitude for 21 days. this will surely help you to be
-                more positive and happy in your life.
+      <!--==================== Why Gratitude Tree Kit Starts=========================-->
+      <section class="mx-auto w-full py-5 bg-amber-100 flex justify-center">
+        <div class="flex flex-wrap gap-4 justify-start container mb-20">
+          <div class="">
+            <div class="w-full my-5">
+              <h2 class="text-4xl font-semibold my-3 text-pretty text-gray-800">
+                The Gratitude Tree Kit Includes:
+              </h2>
+              <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Card 1 -->
+                  <div
+                    class="p-2 border shadow-sm rounded-lg flex items-center"
+                  >
+                    <img
+                      src="/images/tree2.png"
+                      alt="3D Design MDF Material Tree"
+                      class="w-36 lg:w-56 lg:h-auto h-36 mr-4"
+                    />
+                    <div>
+                      <h2 class="text-2xl text-gray-900 mb-3 font-semibold">
+                        3D Design MDF Material Tree
+                      </h2>
+                      <p class="text-lg text-gray-800">
+                        The intricate branches of our 3D MDF Material Tree
+                        create a stunning, lifelike appearance that adds depth
+                        and character to any room.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div
+                    class="p-2 border shadow-sm rounded-lg flex items-center"
+                  >
+                    <img
+                      src="/images/leaves.png"
+                      alt="30 colourful thick paper leaves"
+                      class="w-36 lg:w-56 lg:h-auto h-36 mr-4"
+                    />
+                    <div>
+                      <h2 class="text-2xl text-gray-900 mb-3 font-semibold">
+                        30 colourful thick paper leaves
+                      </h2>
+                      <p class="text-lg text-gray-800">
+                        The leaves feature a vibrant, nature-inspired design
+                        that complements the tree's rustic aesthetic.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex lg:justify-center justify-start">
+                  <div class="mt-4 lg:w-2/3 w-full">
+                    <!-- Card 3 -->
+                    <div
+                      class="p-2 border shadow-sm rounded-lg flex items-center"
+                    >
+                      <img
+                        src="/images/21-day-challenge-sheet.jpg"
+                        alt="21-Day Gratitude Challenge Sheet"
+                        class="w-36 lg:w-96 p-1 lg:p-4 lg:h-auto h-36 mr-4"
+                      />
+                      <div>
+                        <h2 class="text-2xl text-gray-900 mb-3 font-semibold">
+                          21-Day Gratitude Challenge Sheet
+                        </h2>
+                        <p class="text-lg text-gray-800">
+                          Take a moment each day to reflect on what you're
+                          grateful for. By focusing on what you're grateful for,
+                          you can enhance your mental well-being and outlook on
+                          life.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- ========================How to Use the product ends==========-->
+      <!--==================== Why Gratitude Tree Kit Ends=========================-->
 
-      <!--==================== Our story starts =========================-->
-      <section
-        class="px-5 sm:px-10 md:px-20 lg:px-10 xl:px-20 py-8 bg-gray-100"
-        id="cards"
-      >
-        <h3
-          class="leading-none text-center m-12 text-[#F89D1C] font-black text-5xl"
-        >
-          Our Story
-        </h3>
+      <!--======= How to use the Gratitude Kit tree start here  ================ -->
+
+      <section class="px-2 m-0 bg-white md:px-20 lg:px-16 xl:px-20">
+        <h2 class="text-4xl py-4 font-semibold mb-4 text-center text-gray-800">
+          How to Use Your Gratitude Tree Kit
+        </h2>
         <ul
-          class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+          class="timeline timeline-snap-icon pl-4 bg-white max-md:timeline-compact timeline-vertical"
         >
-          <li>
+          <li class="">
             <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="#D3D3D3"
-                class="h-5 w-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <img
+                class="object-cover object-center z-50"
+                src="/images/assembling.png"
+                width="100"
+                alt="assembling the tree kit by sliding together"
+              />
             </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono text-gray-700 italic">2000</time>
-              <div
-                class="text-lg animate__animated animate__slideInLeft text-[#F89D1C] font-black"
+
+            <div class="timeline-start lg:-mt-32">
+              <h1
+                class="lg:text-3xl mx-auto text-start mb-2 lg:mb-4 text-lg animate__animated animate__slideInLeft text-[#f87d1fa2] font-black"
               >
-                Ideation and Realization
-              </div>
-              <p class="text-[#333333]">
-                I noticed the issue and have been running the study to see the
-                solution that can impact many people.
+                Step 1: Assemble the Tree
+              </h1>
+
+              <p class="text-[#333333] text-sm text-start rounded-sm">
+                Tree made up of 2 beautifully crafted MDF material pieces as
+                both parts of the tree. Assemble the two pieces of tree by
+                gently sliding the two pieces together and place it in a
+                prominent spot in your Home.
               </p>
             </div>
-            <hr />
+            <hr class="lg:my-20 my-8 border-t-4 border-black" />
           </li>
           <li>
-            <hr />
+            <hr class="lg:my-16 my-8 z-50 border-t-8 border-black" />
+
             <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="#FFFF00"
-                class="h-5 w-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <img
+                class="object-contain z-50 object-center repeat"
+                src="/images/Highlights/product3.jpg"
+                width="100"
+                alt=""
+              />
             </div>
-            <div class="timeline-end mb-10">
-              <time class="font-mono text-gray-700 italic">2005</time>
+            <div class="timeline-end lg:-mt-40">
               <div
-                class="text-lg animate__animated animate__slideInRight text-[#F89D1C] font-black"
+                class="lg:text-3xl mx-auto text-start lg:pl-2 mb-2 lg:mb-4 text-lg animate__animated animate__slideInRight text-[#f87d1fa2] font-black"
               >
-                Research and Development
+                Step 2: Complete the Challenge
               </div>
-              <p class="text-[#333333]">
-                I have published the paper about the well-being and pschological
-                issues and their solutions
+              <p class="text-[#333333] pl-3 text-sm text-start rounded-sm">
+                We have also included a 21-day gratitude challenge sheet to help
+                you deepen your practice. In 21-day gratitude challenge sheet
+                each day for 21 days , you will have a new prompt to reflect on
+                and express gratitude for
               </p>
             </div>
-            <hr />
+            <hr class="lg:my-16 my-8 border-t-4 border-black" />
           </li>
           <li>
-            <hr />
+            <hr class="lg:my-16 my-8 border-t-4 border-black" />
             <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="#FFA500"
-                class="h-5 w-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <img
+                class="object-cover object-center z-50"
+                src="/images/hanging-leaves.png"
+                width="100"
+                alt=""
+              />
             </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono text-gray-700 italic">2010</time>
+            <div class="timeline-start lg:-mt-32">
               <div
-                class="text-lg animate__animated animate__slideInLeft text-[#F89D1C] font-black"
+                class="lg:text-3xl mx-auto text-start mb-2 lg:mb-4 text-lg animate__animated animate__slideInLeft text-[#f87d1fa2] font-black"
               >
-                Testing and enhancement
+                Step 3: Hang the Leaves
               </div>
-              <p class="text-[#333333]">
-                I started giving firsthand counselling to many people through
-                the associated companies and I have come up with the deep
-                understanding of the root cause of the problems
+              <p class="text-[#333333] text-sm text-start rounded-sm">
+                As per given prompt on each day for 21 days simply write down
+                what you are thankful for on the leaves and hang them on the
+                branches of gratitude tree, creating a visual representation of
+                your Gratitude Journey.
               </p>
             </div>
-            <hr />
+            <hr class="lg:my-16 my-8 border-t-4 border-black" />
           </li>
           <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="#00FF00"
-                class="h-5 w-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="timeline-end mb-10">
-              <time class="font-mono text-gray-700 italic">2020</time>
+            <hr class="lg:my-16 my-8 border-t-4 border-black" />
+
+            <div
+              class="timeline-middle text-gray-800 rounded text-end mt-3 mb-5"
+            >
               <div
-                class="text-lg animate__animated animate__slideInRight text-[#F89D1C] font-black"
+                class="lg:text-lg bg-amber-500 rounded-full hover:bg-amber-600 hover:border-amber-700 px-9 py-3 animate__animated animate__bounce text-white font-black"
               >
-                Prototyping and implementation
+                <a target="_blank" href="https://www.amazon.in/"
+                  >Buy The Gratitude Tree Kit Now</a
+                >
               </div>
-              <p class="text-[#333333]">
-                I started the counselling individually and have recieved many
-                people approaching me for the same. I have helped many who were
-                in my location and those who would reach me but I longed to
-                reach others who need this product.
-              </p>
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="#0000FF"
-                class="h-5 w-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="timeline-start md:text-end mb-10">
-              <time class="font-mono text-gray-700 italic">2024</time>
-              <div
-                class="text-lg animate__animated animate__slideInLeft text-[#F89D1C] font-black"
-              >
-                Product Launch and Marketing
-              </div>
-              <p class="text-[#333333]">
-                Development and implementation of Gratitude Tree kit and 21
-                Gratitude challenge. this is what I wanted to do ever since and
-                the products are available on Amazon to everyone who wants to
-                buy.
-              </p>
             </div>
           </li>
         </ul>
       </section>
 
-      <!--==================== Our story ends =========================-->
-
-      <!--==================== Blogs start=========================-->
-      <section
-        class="px-5 border-b-4 border-slate-200 sm:px-10 md:px-20 lg:px-10 xl:px-20 py-8 bg-gray-50"
-        id="blog-posts"
-      >
-        <div class="max-w-screen-xl mx-auto">
-          <div class="xl:flex">
-            <div>
-              <h3 class="leading-none text-[#F89D1C] font-black text-3xl">
-                Popular Posts
-              </h3>
-              <div
-                class="flex flex-col items-center lg:flex-row lg:items-stretch lg:justify-around"
-              >
-                <a
-                  href="blog"
-                  class="flex w-full max-w-sm mt-6 lg:mt-8 xl:mr-8"
-                >
-                  <div
-                    class="transition-all duration-300 cursor-pointer w-full shadow-lg hover:scale-105 hover:border-2 hover:border-[#F89D1C] rounded-lg bg-gray-100 relative"
-                  >
-                    <div
-                      class="w-full h-48 bg-cover object-center object-cover rounded-t-lg"
-                      style="background-image: url('/images/mental health.jpg')"
-                    ></div>
-                    <div class="p-6 hover:border-t-2 hover:border-[#F89D1C]">
-                      <div class="text-lg text-black font-bold">
-                        Tips for healing your mind and soul
-                      </div>
-                      <div class="mt-2 text-gray-900 text-sm">
-                        Healing your mind and soul is a journey that requires
-                        patience and dedication. This article provides some tips
-                        that can help you heal your mind and soul.
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="blog"
-                  class="flex w-full max-w-sm mt-6 lg:mt-8 xl:mr-8"
-                >
-                  <div
-                    class="transition-all duration-300 cursor-pointer w-full shadow-lg hover:scale-105 hover:border-2 hover:border-[#F89D1C] rounded-lg bg-gray-100 relative"
-                  >
-                    <div
-                      class="w-full h-48 bg-cover object-center object-fill rounded-t-lg"
-                      style="background-image: url('/images/mental health.jpg')"
-                    ></div>
-                    <div class="p-6 hover:border-t-2 hover:border-[#F89D1C]">
-                      <div class="text-lg text-black font-bold">
-                        Getting started with Gratitude Tree Kit
-                      </div>
-                      <div class="mt-2 text-gray-900 text-sm">
-                        The Gratitude Tree Kit is a tool that can help you to be
-                        more positive and happy in your life. This article
-                        provides some tips on how to get started with the
-                        Gratitude Tree Kit.
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="mt-12 mb-4 xl:mt-0 h-auto items-center xl:ml-8">
-              <h4 class="leading-none font-black text-[#F89D1C] text-2xl">
-                Recent Posts [Since Jan. 2024]
-              </h4>
-              <div
-                class="flex bg-gray-100 overflow-y-auto p-3 flex-col items-center lg:flex-row lg:items-stretch lg:justify-around xl:flex-col"
-              >
-                <a href="blog" class="flex w-full max-w-sm mt-6 lg:mt-8">
-                  <div
-                    class="transition-all duration-300 cursor-pointer w-full shadow-lg hover:shadow-xl rounded-lg bg-gray-100 relative xl:flex xl:flex-row-reverse hover:border-t-6 hover:border-[#F89D1C] xl:items-center xl:px-6 xl:py-8"
-                  >
-                    <div
-                      class="w-full h-48 bg-cover rounded-t-lg xl:w-32 xl:h-20 xl:rounded-lg xl:ml-2"
-                      style="background-image: url('/images/mental health.jpg')"
-                    ></div>
-                    <div class="p-6 xl:p-0">
-                      <div class="text-lg text-black font-bold">
-                        Cut-off all the negative thoughts with this advice.
-                      </div>
-                      <div class="mt-2 text-gray-900 text-sm xl:hidden">
-                        Negative thoughts can be harmful to your mental health.
-                        This article provides some advice on how you can cut off
-                        all the negative thoughts and be more positive.
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a href="blog" class="flex w-full max-w-sm mt-6 lg:mt-8">
-                  <div
-                    class="transition-all duration-300 cursor-pointer w-full shadow-lg hover:shadow-xl rounded-lg bg-gray-100 relative xl:flex xl:flex-row-reverse hover:border-t-6 hover:border-[#F89D1C] xl:items-center xl:px-6 xl:py-8"
-                  >
-                    <div
-                      class="w-full h-48 bg-cover rounded-t-lg xl:w-32 xl:h-20 xl:rounded-lg xl:ml-2"
-                      style="background-image: url('/images/mental health.jpg')"
-                    ></div>
-                    <div class="p-6 xl:p-0">
-                      <div class="text-lg text-black font-bold">
-                        Take these steps to improve yourself and be more
-                        positive
-                      </div>
-                      <div class="mt-2 text-gray-900 text-sm xl:hidden">
-                        Negative thoughts can be harmful to your mental health.
-                        This article provides some advice on how you can cut off
-                        all the negative thoughts and be more positive.
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="/blog" class="flex w-full max-w-sm mt-6 lg:mt-8">
-                  <div
-                    class="transition-all duration-300 cursor-pointer w-full shadow-lg hover:shadow-xl rounded-lg bg-gray-100 hover:border-t-6 hover:border-[#F89D1C] relative xl:flex xl:flex-row-reverse xl:items-center xl:px-6 xl:py-8"
-                  >
-                    <div
-                      class="w-full h-48 bg-cover rounded-t-lg xl:w-32 xl:h-20 xl:rounded-lg xl:ml-2"
-                      style="background-image: url('/images/mental health.jpg')"
-                    ></div>
-                    <div class="p-6 xl:p-0">
-                      <div class="text-lg text-black font-bold">
-                        There is always a room for improvement
-                      </div>
-                      <div class="mt-2 text-gray-900 text-sm xl:hidden">
-                        Stop being hard on yourself and start improving yourself
-                        with the help of the Gratitude Tree Kit. This article
-                        provides some tips on how you can improve yourself and
-                        be
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--==================== blogs end=========================-->
+      <!-- ========How to use the Gratitude Kit tree ends here ============== -->
 
       <!--==================== Testimonials start=========================-->
-      <section class="p-4 bg-slate-50 shadow-lg">
-        <div class="container mx-auto px-4">
-          <h2 class="text-5xl m-6 text-center text-[#F89D1C]">Testimonials</h2>
+
+      <section class="bg-[#f5f2f2]" id="Testimonial" data-wow-delay="0.1s">
+        <div class="py-5 px-8">
           <div
-            class="my-4 flex mx-auto w-60 h-2 border-4 border-indigo-500"
-          ></div>
-        </div>
-        <section class="bg-gray-50">
-          <div
-            class="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24"
+            class="text-center position-relative pb-3 mb-4 mx-auto"
+            style="max-width: 600px"
           >
-            <div
-              class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16"
+            <h5
+              class="text-3xl font-semibold mb-4 text-center mt-4 text-gray-800"
             >
-              <div
-                class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right"
-              >
-                <h2
-                  class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
-                >
-                  Here are what some of our amazing customers are saying ...
-                </h2>
-
-                <p class="mt-4 text-gray-700">
-                  We have helped many people to be more positive and happy in
-                  their life. Here are some of the testimonials from our
-                  customers.
-                </p>
-
-                <div class="hidden lg:mt-8 lg:flex lg:gap-4">
-                  <button
-                    aria-label="Previous slide"
-                    id="keen-slider-previous-desktop"
-                    class="rounded-full border border-[#F89D1C] p-3 text-[#F89D1C] transition hover:bg-[#F89D1C] hover:text-white"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-5 rtl:rotate-180"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.75 19.5L8.25 12l7.5-7.5"
-                      />
-                    </svg>
-                  </button>
-
-                  <button
-                    aria-label="Next slide"
-                    id="keen-slider-next-desktop"
-                    class="rounded-full border border-[#F89D1C] p-3 text-[#F89D1C] transition hover:bg-[#F89D1C] hover:text-white"
-                  >
-                    <svg
-                      class="size-5 rtl:rotate-180"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M9 5l7 7-7 7"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      />
-                    </svg>
-                  </button>
+              Testimonial
+            </h5>
+            <h1 class="lg:mb-4 text-gray-700">
+              What Our Clients Say About Our Services
+            </h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-home testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full object-center object-contain h-20 w-20"
+                      src="/images/client1.jpg"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">-----------</h4>
+                    <p class="text-sm text-gray-600">
+                      Graphic Designer
+                    </p>
+                  </div>
                 </div>
               </div>
-
-              <div class="-mx-6 lg:col-span-2 lg:mx-0">
-                <div id="keen-slider" class="keen-slider">
-                  <!-- Testimonial 1 -->
-                  <div class="keen-slider__slide">
-                    <blockquote class="wfull shadow-lg">
-                      <div
-                        class="relative rounded-lg p-14 bg-gray-100 text-gray-700 leading-snug"
-                      >
-                        <div class="flex gap-0.5 text-green-500">
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-                        </div>
-                        <div class="p-2">
-                          <svg
-                            class="w-8 opacity-25 text-indigo-500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision"
-                            image-rendering="optimizeQuality"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            viewBox="0 0 640 640"
-                            fill="#F89D1C"
-                          >
-                            <path
-                              d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          I know I was facing a lot of issues in my life and I
-                          was not able to find a solution to it. But after using
-                          the Gratitude Tree Kit, I have seen a lot of changes
-                          in my life. I am more positive and happy now.
-                        </div>
-                        <div class="p-0 m-0">
-                          <div
-                            class="mx-auto w-full border border-gray-300 my-8"
-                          ></div>
-                          <div class="flex justify-center">
-                            <div class="w-1/3">
-                              <img
-                                class="w-12 h-12 rounded-full border-2 border-[#F89D1C]"
-                                src="/images/profile.png"
-                                alt="Customer avatar"
-                              />
-                            </div>
-                            <div class="ml-2">
-                              <div
-                                class="font-bold text-balance text-[#F89D1C]"
-                              >
-                                Innocent Niyonzima
-                              </div>
-                              <div class="text-sm text-gray-600 mt-1">
-                                Student at Marwadi University
-                                <a href="/testimonials"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-
-                  <!-- Testimonial 2 -->
-                  <div class="keen-slider__slide">
-                    <blockquote class="wfull shadow-lg">
-                      <div
-                        class="relative rounded-lg p-14 bg-gray-100 text-gray-700 leading-snug"
-                      >
-                        <div class="flex gap-0.5 text-green-500">
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-                        </div>
-                        <div class="p-2">
-                          <svg
-                            class="w-8 opacity-25 text-indigo-500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision"
-                            image-rendering="optimizeQuality"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            viewBox="0 0 640 640"
-                            fill="#F89D1C"
-                          >
-                            <path
-                              d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          I know I was facing a lot of issues in my life and I
-                          was not able to find a solution to it. But after using
-                          the Gratitude Tree Kit, I have seen a lot of changes
-                          in my life. I am more positive and happy now.
-                        </div>
-                        <div class="p-0 m-0">
-                          <div
-                            class="mx-auto w-full border border-gray-300 my-8"
-                          ></div>
-                          <div class="flex justify-center">
-                            <div class="w-1/3">
-                              <img
-                                class="w-12 h-12 rounded-full border-2 border-[#F89D1C]"
-                                src="/images/profile.png"
-                                alt="Customer avatar"
-                              />
-                            </div>
-                            <div class="ml-2">
-                              <div
-                                class="font-bold text-balance text-[#F89D1C]"
-                              >
-                                Innocent Niyonzima
-                              </div>
-                              <div class="text-sm text-gray-600 mt-1">
-                                Student at Marwadi University
-                                <a href="/testimonials"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <!--  Testimonial 3  -->
-                  <div class="keen-slider__slide">
-                    <blockquote class="wfull shadow-lg">
-                      <div
-                        class="relative rounded-lg p-14 bg-gray-100 text-gray-700 leading-snug"
-                      >
-                        <div class="flex gap-0.5 text-green-500">
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-                        </div>
-                        <div class="p-2">
-                          <svg
-                            class="w-8 opacity-25 text-indigo-500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision"
-                            image-rendering="optimizeQuality"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            viewBox="0 0 640 640"
-                            fill="#F89D1C"
-                          >
-                            <path
-                              d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          I know I was facing a lot of issues in my life and I
-                          was not able to find a solution to it. But after using
-                          the Gratitude Tree Kit, I have seen a lot of changes
-                          in my life. I am more positive and happy now.
-                        </div>
-                        <div class="p-0 m-0">
-                          <div
-                            class="mx-auto w-full border border-gray-300 my-8"
-                          ></div>
-                          <div class="flex justify-center">
-                            <div class="w-1/3">
-                              <img
-                                class="w-12 h-12 rounded-full border-2 border-[#F89D1C]"
-                                src="/images/profile.png"
-                                alt="Customer avatar"
-                              />
-                            </div>
-                            <div class="ml-2">
-                              <div
-                                class="font-bold text-balance text-[#F89D1C]"
-                              >
-                                Innocent Niyonzima
-                              </div>
-                              <div class="text-sm text-gray-600 mt-1">
-                                Student at Marwadi University
-                                <a href="/testimonials"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                  <!-- Testimonial 4 -->
-                  <div class="keen-slider__slide">
-                    <blockquote class="wfull shadow-lg">
-                      <div
-                        class="relative rounded-lg p-14 bg-gray-100 text-gray-700 leading-snug"
-                      >
-                        <div class="flex gap-0.5 text-green-500">
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-
-                          <svg
-                            class="h-5 w-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                            />
-                          </svg>
-                        </div>
-                        <div class="p-2">
-                          <svg
-                            class="w-8 opacity-25 text-indigo-500"
-                            xmlns="http://www.w3.org/2000/svg"
-                            shape-rendering="geometricPrecision"
-                            text-rendering="geometricPrecision"
-                            image-rendering="optimizeQuality"
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            viewBox="0 0 640 640"
-                            fill="#F89D1C"
-                          >
-                            <path
-                              d="M557.133 561.704H442.128c-44.256 0-80.458-36.19-80.458-80.446 0-165.58-42.32-347.485 160.656-399.418 91.95-23.516 115.915 77.753 18.119 84.745-59.647 4.276-71.293 42.804-73.147 101.068h92.269c44.256 0 80.458 36.201 80.458 80.458v130.702c0 45.591-37.3 82.89-82.891 82.89zm-358.032 0H84.096c-44.256 0-80.446-36.19-80.446-80.446 0-165.58-42.331-347.485 160.644-399.418 91.95-23.516 115.915 77.753 18.118 84.745-59.646 4.276-71.292 42.804-73.146 101.068h92.269c44.256 0 80.457 36.201 80.457 80.458v130.702c0 45.591-37.3 82.89-82.89 82.89z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          I know I was facing a lot of issues in my life and I
-                          was not able to find a solution to it. But after using
-                          the Gratitude Tree Kit, I have seen a lot of changes
-                          in my life. I am more positive and happy now.
-                        </div>
-                        <div class="p-0 m-0">
-                          <div
-                            class="mx-auto w-full border border-gray-300 my-8"
-                          ></div>
-                          <div class="flex justify-center">
-                            <div class="w-1/3">
-                              <img
-                                class="w-12 h-12 rounded-full border-2 border-[#F89D1C]"
-                                src="/images/profile.png"
-                                alt="Customer avatar"
-                              />
-                            </div>
-                            <div class="ml-2">
-                              <div
-                                class="font-bold text-balance text-[#F89D1C]"
-                              >
-                                Innocent Niyonzima
-                              </div>
-                              <div class="text-sm text-gray-600 mt-1">
-                                Student at Marwadi University
-                                <a href="/testimonials"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </blockquote>
-                  </div>
-                </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has been a game-changer in my daily
+                  routine. It's a beautiful and meaningful way to cultivate a
+                  habit of gratitude.
+                </p>
               </div>
             </div>
 
-            <div class="mt-8 flex justify-center gap-4 lg:hidden">
-              <button
-                aria-label="Previous slide"
-                id="keen-slider-previous"
-                class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
-              >
-                <svg
-                  class="size-5 -rotate-180 transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </button>
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full h-20 w-20"
+                      src="/images/client2.png"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Madhav Faldu</h4>
+                    <p class="text-sm text-gray-600">
+                      Web Developer 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  This kit is a wonderful gift for anyone looking to bring more
+                  positivity and mindfulness into their life. Highly recommend!
+                </p>
+              </div>
+            </div>
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full object-center object-contain h-20 w-20"
+                      src="/images/client1.jpg"
+                      alt="Profile picture"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">--------</h4>
+                    <p class="text-sm text-gray-600">
+                      Graphic Designer 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has been a game-changer in my daily
+                  routine. It's a beautiful and meaningful way to cultivate a
+                  habit of gratitude.
+                </p>
+              </div>
+            </div>
 
-              <button
-                aria-label="Next slide"
-                id="keen-slider-next"
-                class="rounded-full border border-rose-600 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white"
-              >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  />
-                </svg>
-              </button>
+            <div class="testimonial-item my-4">
+              <div class="border-b pt-5 pb-4 px-5">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      class="rounded-full h-20 w-20"
+                      src="/images/client3.png"
+                      alt="Client 3 Image"
+                    />
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="text-primary mb-1">Innocent Niyonzima</h4>
+                    <p class="text-sm text-gray-600">
+                      Computer Engineer
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4 pb-5 px-5 text-justify">
+                <p class="text-balck">
+                  The Gratitude Tree Kit has transformed my outlook on life. I
+                  now appreciate the little things and feel more content
+                </p>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
+
       <!--==================== Testimonials ends=========================-->
 
       <!--==================== contact Us Starts=========================-->
-      <div class="p-2 bg-[#F1F5F9] my-4">
+      <div class="p-2 my-4">
         <div
-          class="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]"
+          class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-12 bg-amber-50"
         >
-          <div>
-            <h1 class="text-3xl font-extrabold text-[#F89D1C]">Let's Talk</h1>
-            <p class="text-sm text-gray-400 mt-3">
-              Have some big idea or brand to develop and need help? Then reach
-              out we'd love to hear about your project and provide help.
-            </p>
-            <div class="mt-12">
-              <h2 class="text-lg font-extrabold">Email</h2>
-              <ul class="mt-3">
-                <li class="flex items-center">
-                  <div
-                    class="bg-gray-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20px"
-                      height="20px"
-                      fill="#F89D1C"
-                      viewBox="0 0 479.058 479.058"
-                    >
-                      <path
-                        d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                        data-original="#F89D1C"
-                      />
-                    </svg>
-                  </div>
-                  <a
-                    target="blank"
-                    href="/"
-                    class="text-[#F89D1C] text-sm ml-3"
-                  >
-                    <small class="block">Mail</small>
-                    <strong>info@shivcreation.com</strong>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="mt-12">
-              <h2 class="text-lg font-extrabold">Socials</h2>
-              <ul class="flex mt-3 space-x-4">
-                <li
-                  class="bg-gray-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-                >
-                  <a href="javascript:void(0)">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20px"
-                      height="20px"
-                      fill="#F89D1C"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                        data-original="#000000"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li
-                  class="bg-gray-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-                >
-                  <a href="javascript:void(0)">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20px"
-                      height="20px"
-                      fill="#F89D1C"
-                      viewBox="0 0 511 512"
-                    >
-                      <path
-                        d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                        data-original="#F89D1C"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li
-                  class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0"
-                >
-                  <a href="javascript:void(0)">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20px"
-                      height="20px"
-                      fill="#F89D1C"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+          <div class="mb-4">
+            <div
+              class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12"
+            >
+              <h2
+                class="font-heading mb-4 font-bold tracking-tight text-black text-3xl sm:text-5xl"
+              >
+                Get in Touch
+              </h2>
+              <p class="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
+                We are more than happy to help you with any queries or concerns.
+              </p>
             </div>
           </div>
-
-          <form class="ml-auo space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
-            />
-            <textarea
-              placeholder="Message"
-              rows="6"
-              class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
-            ></textarea>
-            <button
-              type="button"
-              class="text-white bg-[#F89D1C] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full"
-            >
-              Send
-            </button>
-          </form>
+          <div class="flex items-stretch justify-center">
+            <div class="grid md:grid-cols-2">
+              <div class="h-full pr-6">
+                <p class="mt-3 mb-12 text-lg text-gray-600">
+                  Shivcreation we really value your feedback and suggestions. If
+                  you have any questions or comments, please feel free to
+                  contact us. We will get back to you as soon as possible.
+                </p>
+                <ul class="mb-6 md:mb-0">
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path
+                          d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
+                        Our Address
+                      </h3>
+                      <p class="text-gray-500">
+                        504, Vardhman Heights, opposite Sadhu Vaswani school,
+                        Sadhu Vaswani Road,
+                      </p>
+                      <p class="text-gray-600">
+                        Rajkot - 360005, Gujarat, India
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                        ></path>
+                        <path d="M15 7a2 2 0 0 1 2 2"></path>
+                        <path d="M15 3a6 6 0 0 1 6 6"></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
+                        Contact
+                      </h3>
+                      <p class="text-gray-500">
+                        Mobile:
+                        <a
+                          class="hover:underline hover:text-blue-500"
+                          href="tel: +91 90999 40095"
+                          >+917990229965</a
+                        >
+                      </p>
+                      <p class="text-gray-500">
+                        Mail:
+                        <a
+                          class="hover:underline"
+                          href="mailto:info@shivcreation.com"
+                          >help@shivcreationworld.com</a
+                        >
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-[#F89D1C] text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                        <path d="M12 7v5l3 3"></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3 class="mb-2 text-lg font-medium leading-6 text-black">
+                        Working hours
+                      </h3>
+                      <p class="text-gray-600">
+                        Monday - Friday: 10:00 AM - 06:00 PM ( IST)
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
+                <h2 class="mb-4 text-2xl text-black font-bold">
+                  Ready to Get Started?
+                </h2>
+                <!-- feedback div after submitting the form  -->
+                <div
+                  id="feedback"
+                  class="text-center p-1 rounded-sm text-white"
+                ></div>
+                <form
+                  method="post"
+                  action="messages"
+                  id="contact-us"
+                  class="ml-auo space-y-4"
+                >
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="sender"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  />
+                  <textarea
+                    placeholder="Message"
+                    rows="6"
+                    name="content"
+                    class="w-full bg-white shadow-lg rounded-md py-2.5 px-4 border border-[#F89D1C] text-sm outline-[#F89D1C]"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    class="text-white bg-[#F89D1C] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full"
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!--==================== contact Us Ends=========================-->
+      <!-- another section  -->
     </main>
 
     <!--==================== Footer starts=========================-->
     <%- include('./partials/footer.ejs') %>
     <!--==================== Footer ends=========================-->
   </body>
-  <script src="/javascripts/main.js"></script>
-  <script src="/javascripts/slider.js"></script>
+  <script defer src="/javascripts/main.js"></script>
   <script src="/javascripts/hero.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-us')
+      const feedbackDiv = document.getElementById('feedback')
+      console.log(form)
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const formData = new FormData(form)
+        const sender = formData.get('sender')
+        const email = formData.get('email')
+        const subject = formData.get('subject')
+        const content = formData.get('content')
+        const message = {
+          sender,
+          email,
+          subject,
+          content,
+        }
+        // Create a new XMLHttpRequest object
+        const xhr = new XMLHttpRequest()
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200 || xhr.status === 201) {
+              // Create the paragraph element
+              const successMessage = document.createElement('p')
+              successMessage.classList.add(
+                'text-2xl',
+                'text-green-500',
+                'bg-amber-500',
+                'p-2',
+                'rounded-md',
+                'font-extralight',
+                'animate__animated',
+                'animate__pulse',
+                'animate__faster',
+                'animate__infinite',
+              )
+              successMessage.textContent = 'The message is sent successfully.'
+              // Append the paragraph element to the feedbackDiv
+              feedbackDiv.appendChild(successMessage)
+              form.reset()
+            } else {
+              console.error('Request failed:', xhr.status)
+            }
+          }
+        }
+
+        // Configure the request
+        xhr.open('POST', 'http://localhost:3000/messages/')
+        xhr.setRequestHeader('Content-Type', 'application/json')
+
+        // Send the request with JSON data
+        xhr.send(JSON.stringify(message))
+      })
+    })
+  </script>
 </html>
